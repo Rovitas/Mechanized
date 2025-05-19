@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "mechanized:block/dome_tuner"
+    },
+    "facing=east": {
+      "model": "mechanized:block/dome_tuner",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "mechanized:block/dome_tuner",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "mechanized:block/dome_tuner",
+      "y": 270
+    }
+  }
+}
