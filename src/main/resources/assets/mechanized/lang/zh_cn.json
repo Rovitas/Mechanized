@@ -1,5 +1,11 @@
 {
   "item_group.mechanized.main": "机械纪元",
+
+  "item.mechanized.basic_dome": "基础空间穹顶",
+  "item.mechanized.booster": "Booster",
+
   "block.mechanized.energetic_flower": "充满能量的花",
-  "block.mechanized.dome_tuner": "空间穹顶调整器"
+  "block.mechanized.dome_tuner": "空间穹顶调整器",
+
+  "curios.identifier.bracelet": "手环"
 }

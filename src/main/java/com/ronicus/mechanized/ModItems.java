@@ -1,8 +1,10 @@
 package com.ronicus.mechanized;
 
+import com.ronicus.mechanized.device.DomeArmorItem;
+import com.ronicus.mechanized.device.BasicDomeItem;
+import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -10,6 +12,7 @@ import net.minecraftforge.registries.RegistryObject;
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Mechanized.MODID);
     //Items
+    public static final RegistryObject<Item> BOOSTER;
     public static final RegistryObject<Item> BASIC_DOME;
     //Blocks
     public static final RegistryObject<Item> ENERGETIC_FLOWER;
@@ -17,7 +20,8 @@ public class ModItems {
 
     //Items
     static {
-        BASIC_DOME = ITEMS.register("basic_dome", () -> new Item(new Item.Properties()));
+        BOOSTER = ITEMS.register("booster", () -> new DomeArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()));
+        BASIC_DOME = ITEMS.register("basic_dome",() -> new BasicDomeItem(new Item.Properties().stacksTo(1)));
     }
 
     //Blocks

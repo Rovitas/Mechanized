@@ -14,10 +14,11 @@ public class ModItemGroups {
         MAIN = CREATIVE_MODE_TABS.register(
                 "mechanized", () -> CreativeModeTab.builder()
                         .title(Component.translatable("item_group.mechanized.main"))
-                        .icon(() -> ModItems.ENERGETIC_FLOWER.get().getDefaultInstance())
+                        .icon(() -> ModItems.BASIC_DOME.get().getDefaultInstance())
                         .displayItems((parameters, output) -> {
                             output.accept(ModItems.ENERGETIC_FLOWER.get());
                             output.accept(ModItems.DOME_TUNER.get());
+                            output.accept(ModItems.BASIC_DOME.get());
                         })
                         .build()
         );

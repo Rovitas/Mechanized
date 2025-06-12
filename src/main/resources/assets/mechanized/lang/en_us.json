@@ -1,5 +1,11 @@
 {
   "item_group.mechanized.main": "Mechanized",
+
+  "item.mechanized.basic_dome": "Basic Dome",
+  "item.mechanized.booster": "Booster",
+
   "block.mechanized.energetic_flower": "Energetic Flower",
-  "block.mechanized.dome_tuner": "Dome Tuner"
+  "block.mechanized.dome_tuner": "Dome Tuner",
+
+  "curios.identifier.bracelet": "Bracelet"
 }
