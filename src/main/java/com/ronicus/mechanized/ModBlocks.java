@@ -18,13 +18,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> DOME_TUNER;
 
     static {
-        ENERGETIC_FLOWER = BLOCKS.register("energetic_flower",() -> new FlowerBlock(MobEffects.NIGHT_VISION, 5, BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY).noOcclusion()));
-
-        DOME_TUNER = BLOCKS.register("dome_tuner", () -> new DomeTunerBlock(BlockBehaviour.Properties.of()
-                .requiresCorrectToolForDrops()
-                .lightLevel(state -> 7)
-                .strength(0.5F)
-                .noOcclusion()
-        ));
+        ENERGETIC_FLOWER = BLOCKS.register("energetic_flower",() -> new FlowerBlock(MobEffects.REGENERATION, 10, BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY).noOcclusion().lightLevel(state -> 7)));
+        DOME_TUNER = BLOCKS.register("dome_tuner", () -> new DomeTunerBlock(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().lightLevel(state -> 7).strength(0.5F).noOcclusion()));
     }
 }

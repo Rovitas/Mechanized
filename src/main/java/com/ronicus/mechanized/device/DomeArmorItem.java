@@ -25,8 +25,8 @@ public class DomeArmorItem extends Item implements Equipable {
         this.type = type;
         ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
         UUID uuid = UUID.fromString("845DB27C-C624-495F-8C9F-6020A9A58B6B");
-        builder.put(Attributes.MOVEMENT_SPEED, new AttributeModifier(uuid,"Armor speed",(double)0.5, AttributeModifier.Operation.ADDITION));
-        builder.put(Attributes.JUMP_STRENGTH, new AttributeModifier(uuid,"Jump",(double)1.5, AttributeModifier.Operation.ADDITION));
+        builder.put(Attributes.MOVEMENT_SPEED, new AttributeModifier(uuid,"Armor speed",0.5, AttributeModifier.Operation.ADDITION));
+        builder.put(Attributes.JUMP_STRENGTH, new AttributeModifier(uuid,"Jump",1.5, AttributeModifier.Operation.ADDITION));
         this.defaultModifiers = builder.build();
     }
 
