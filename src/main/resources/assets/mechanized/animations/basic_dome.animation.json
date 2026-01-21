@@ -365,6 +365,14 @@
 							"easingArgs": [1]
 						}
 					}
+				},
+				"animate2": {
+					"position": {
+						"vector": [0, -3, 0]
+					},
+					"scale": {
+						"vector": [1, 0, 1]
+					}
 				}
 			}
 		},
@@ -385,6 +393,14 @@
 				"back": {
 					"scale": {
 						"vector": [0, 0, 0]
+					}
+				},
+				"animate2": {
+					"position": {
+						"vector": [0, -3, 0]
+					},
+					"scale": {
+						"vector": [1, 0, 1]
 					}
 				}
 			}
