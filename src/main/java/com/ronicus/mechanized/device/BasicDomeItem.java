@@ -10,6 +10,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.client.extensions.common.IClientItemExtensions;
+import org.jetbrains.annotations.NotNull;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.SingletonGeoAnimatable;
 import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
@@ -47,8 +48,8 @@ public class BasicDomeItem extends Item implements GeoItem {
         });
     }
 
-    private PlayState predicate(AnimationState state){
-        state.getController().setAnimation(STANDBY);
+    private PlayState predicate(AnimationState<?> state){
+        state.getController().setAnimation(IDLE);
         return PlayState.CONTINUE;
     }
 
@@ -63,7 +64,7 @@ public class BasicDomeItem extends Item implements GeoItem {
         return this.cache;
     }
 
-    public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand){
+    public @NotNull InteractionResultHolder<ItemStack> use(@NotNull Level level, @NotNull Player player, @NotNull InteractionHand hand){
         if(level instanceof ServerLevel serverLevel){
             this.triggerAnim(player, GeoItem.getOrAssignId(player.getItemInHand(hand), serverLevel), "startup_cr", "device_startup");
         }
