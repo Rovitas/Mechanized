@@ -49,8 +49,7 @@ public class BasicDomeCurioRenderer implements ICurioRenderer {
         // 渲染物品
         Minecraft.getInstance().getItemRenderer()
                 .renderStatic(itemStack, ItemDisplayContext.FIXED, light,
-                        OverlayTexture.NO_OVERLAY, poseStack, buffer, entity.level(), 0
-                );
+                        OverlayTexture.NO_OVERLAY, poseStack, buffer, entity.level(), 0);
 
         poseStack.popPose();
     }

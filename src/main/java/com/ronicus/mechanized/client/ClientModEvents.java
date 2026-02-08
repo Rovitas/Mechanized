@@ -16,60 +16,7 @@ public class ClientModEvents{
         String msg = event.getOriginalMessage();
         if (msg.startsWith("bracelet ")) {
             event.setCanceled(true);
-
-            String[] args = msg.substring(9).trim().split("\\s+");
-
-            try {
-                if (args.length == 0) {
-                    sendHelp();
-                    return;
-                }
-
-                String command = args[0];
-
-                if ("offset".equals(command)) {
-                    if (args.length == 4) {
-                        float x = Float.parseFloat(args[1]);
-                        float y = Float.parseFloat(args[2]);
-                        float z = Float.parseFloat(args[3]);
-                        BraceletConfig.offsetX = x;
-                        BraceletConfig.offsetY = y;
-                        BraceletConfig.offsetZ = z;
-                        sendFeedback(String.format("Offset updated: %.3f, %.3f, %.3f", x, y, z));
-                    } else {
-                        sendError("Usage: bracelet offset <x> <y> <z>");
-                    }
-                } else if ("scale".equals(command)) {
-                    if (args.length == 2) {
-                        float s = Float.parseFloat(args[1]);
-                        BraceletConfig.scale = s;
-                        sendFeedback(String.format("Scale updated: %.3f", s));
-                    } else {
-                        sendError("Usage: bracelet scale <value>");
-                    }
-                } else if ("rot".equals(command)) {
-                    if (args.length == 4) {
-                        float x = Float.parseFloat(args[1]);
-                        float y = Float.parseFloat(args[2]);
-                        float z = Float.parseFloat(args[3]);
-                        BraceletConfig.rotationX = x;
-                        BraceletConfig.rotationY = y;
-                        BraceletConfig.rotationZ = z;
-                        sendFeedback(String.format("Rotation updated: %.3f, %.3f, %.3f", x, y, z));
-                    } else {
-                        sendError("Usage: bracelet rot <degrees>");
-                    }
-                } else if ("help".equals(command)) {
-                    sendHelp();
-                } else if ("show".equals(command)) {
-                    showArgs();
-                } else {
-                    sendError("Unknown command. Use bracelet help");
-                }
-
-            } catch (NumberFormatException e) {
-                sendError("Invalid number! Please enter valid decimals.");
-            }
+            braceletCommand(msg);
         }
     }
     private static void sendFeedback(String message) {
@@ -98,7 +45,6 @@ public class ClientModEvents{
         }
     }
 
-
     private static void showArgs() {
         Minecraft mc = Minecraft.getInstance();
         if (mc.player != null) {
@@ -107,6 +53,62 @@ public class ClientModEvents{
             mc.player.displayClientMessage(Component.literal(String.format("Scale now: %.3f", BraceletConfig.scale)), false);
             mc.player.displayClientMessage(Component.literal(String.format("Rotation now: %.3f, %.3f, %.3f", BraceletConfig.rotationX, BraceletConfig.rotationY, BraceletConfig.rotationZ)), false);
             mc.player.displayClientMessage(Component.literal("§a=== Arguments END ==="), false);
+        }
+    }
+
+    private static void braceletCommand(String message) {
+        String[] args = message.substring(9).trim().split("\\s+");
+
+        try {
+            if (args.length == 0) {
+                sendHelp();
+                return;
+            }
+
+            String command = args[0];
+
+            if ("offset".equals(command)) {
+                if (args.length == 4) {
+                    float x = Float.parseFloat(args[1]);
+                    float y = Float.parseFloat(args[2]);
+                    float z = Float.parseFloat(args[3]);
+                    BraceletConfig.offsetX = x;
+                    BraceletConfig.offsetY = y;
+                    BraceletConfig.offsetZ = z;
+                    sendFeedback(String.format("Offset updated: %.3f, %.3f, %.3f", x, y, z));
+                } else {
+                    sendError("Usage: bracelet offset <x> <y> <z>");
+                }
+            } else if ("scale".equals(command)) {
+                if (args.length == 2) {
+                    float s = Float.parseFloat(args[1]);
+                    BraceletConfig.scale = s;
+                    sendFeedback(String.format("Scale updated: %.3f", s));
+                } else {
+                    sendError("Usage: bracelet scale <value>");
+                }
+            } else if ("rot".equals(command)) {
+                if (args.length == 4) {
+                    float x = Float.parseFloat(args[1]);
+                    float y = Float.parseFloat(args[2]);
+                    float z = Float.parseFloat(args[3]);
+                    BraceletConfig.rotationX = x;
+                    BraceletConfig.rotationY = y;
+                    BraceletConfig.rotationZ = z;
+                    sendFeedback(String.format("Rotation updated: %.3f, %.3f, %.3f", x, y, z));
+                } else {
+                    sendError("Usage: bracelet rot <degrees>");
+                }
+            } else if ("help".equals(command)) {
+                sendHelp();
+            } else if ("show".equals(command)) {
+                showArgs();
+            } else {
+                sendError("Unknown command. Use bracelet help");
+            }
+
+        } catch (NumberFormatException e) {
+            sendError("Invalid number! Please enter valid decimals.");
         }
     }
 }
