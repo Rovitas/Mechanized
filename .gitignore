@@ -57,4 +57,4 @@ repo/
 !**/src/**/repo/
 
 ### Vibe-coding ###
-!AGENTS.md
+AGENTS.md
