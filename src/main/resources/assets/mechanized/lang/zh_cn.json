@@ -7,5 +7,9 @@
   "block.mechanized.energetic_flower": "充满能量的花",
   "block.mechanized.dome_tuner": "空间穹顶调整器",
 
-  "curios.identifier.bracelet": "手环"
+  "curios.identifier.bracelet": "手环",
+
+  "tooltip.mechanized.basic_dome.state": "状态: %s",
+  "tooltip.mechanized.basic_dome.state.active": "开启",
+  "tooltip.mechanized.basic_dome.state.inactive": "关闭"
 }

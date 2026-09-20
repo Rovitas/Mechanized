@@ -7,5 +7,9 @@
   "block.mechanized.energetic_flower": "Energetic Flower",
   "block.mechanized.dome_tuner": "Dome Tuner",
 
-  "curios.identifier.bracelet": "Bracelet"
+  "curios.identifier.bracelet": "Bracelet",
+
+  "tooltip.mechanized.basic_dome.state": "Status: %s",
+  "tooltip.mechanized.basic_dome.state.active": "Active",
+  "tooltip.mechanized.basic_dome.state.inactive": "Inactive"
 }
