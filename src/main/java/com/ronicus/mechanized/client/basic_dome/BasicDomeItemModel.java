@@ -1,4 +1,4 @@
-package com.ronicus.mechanized.client;
+package com.ronicus.mechanized.client.basic_dome;
 
 import com.ronicus.mechanized.Mechanized;
 import com.ronicus.mechanized.device.BasicDomeItem;

@@ -1,6 +1,6 @@
 package com.ronicus.mechanized.device;
 
-import com.ronicus.mechanized.client.BasicDomeItemRenderer;
+import com.ronicus.mechanized.client.basic_dome.BasicDomeItemRenderer;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.nbt.CompoundTag;

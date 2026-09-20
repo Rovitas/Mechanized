@@ -1,7 +1,8 @@
-package com.ronicus.mechanized.client;
+package com.ronicus.mechanized.client.basic_dome;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
+import com.ronicus.mechanized.client.BraceletConfig;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.EntityModel;
 import net.minecraft.client.model.HumanoidModel;
