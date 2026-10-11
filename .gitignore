@@ -56,5 +56,8 @@ run/
 repo/
 !**/src/**/repo/
 
+### Obsidian ###
+.obsidian/
+
 ### Vibe-coding ###
 AGENTS.md
