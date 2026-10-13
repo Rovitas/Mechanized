@@ -1,33 +1,33 @@
 package com.ronicus.mechanized.content.device.dome.client;
 
-import com.ronicus.mechanized.content.device.dome.BasicDomeItem;
+import com.ronicus.mechanized.content.device.dome.LiteSpaceDomeItem;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.renderer.GeoItemRenderer;
 
-public class BasicDomeItemRenderer extends GeoItemRenderer<BasicDomeItem> {
-    public BasicDomeItemRenderer() {
-        super(new BasicDomeItemModel());
+public class LiteSpaceDomeItemRenderer extends GeoItemRenderer<LiteSpaceDomeItem> {
+    public LiteSpaceDomeItemRenderer() {
+        super(new LiteSpaceDomeItemModel());
     }
 
     @Override
-    public long getInstanceId(BasicDomeItem animatable) {
+    public long getInstanceId(LiteSpaceDomeItem animatable) {
         if (this.currentItemStack != null) {
             long id = GeoItem.getId(this.currentItemStack);
             if (id != Long.MAX_VALUE) {
                 return id;
             }
-            String state = BasicDomeItem.getDomeState(this.currentItemStack);
+            String state = LiteSpaceDomeItem.getDomeState(this.currentItemStack);
             return ((long) this.currentItemStack.getItem().hashCode() << 32) ^ state.hashCode();
         }
         return super.getInstanceId(animatable);
     }
 
     @Override
-    public void renderRecursively(com.mojang.blaze3d.vertex.PoseStack poseStack, BasicDomeItem animatable, software.bernie.geckolib.cache.object.GeoBone bone, net.minecraft.client.renderer.RenderType renderType, net.minecraft.client.renderer.MultiBufferSource bufferSource, com.mojang.blaze3d.vertex.VertexConsumer buffer, boolean isReRender, float partialTick, int packedLight, int packedOverlay, int colour) {
+    public void renderRecursively(com.mojang.blaze3d.vertex.PoseStack poseStack, LiteSpaceDomeItem animatable, software.bernie.geckolib.cache.object.GeoBone bone, net.minecraft.client.renderer.RenderType renderType, net.minecraft.client.renderer.MultiBufferSource bufferSource, com.mojang.blaze3d.vertex.VertexConsumer buffer, boolean isReRender, float partialTick, int packedLight, int packedOverlay, int colour) {
         if ("front".equals(bone.getName()) && this.currentItemStack != null) {
             long instanceId = getInstanceId(animatable);
-            software.bernie.geckolib.animation.AnimatableManager<BasicDomeItem> manager = animatable.getAnimatableInstanceCache().getManagerForId(instanceId);
-            software.bernie.geckolib.animation.AnimationController<BasicDomeItem> controller = manager != null ? manager.getAnimationControllers().get("main_controller") : null;
+            software.bernie.geckolib.animation.AnimatableManager<LiteSpaceDomeItem> manager = animatable.getAnimatableInstanceCache().getManagerForId(instanceId);
+            software.bernie.geckolib.animation.AnimationController<LiteSpaceDomeItem> controller = manager != null ? manager.getAnimationControllers().get("main_controller") : null;
 
             boolean isQuantumIdle = false;
             if (controller != null) {
@@ -40,7 +40,7 @@ public class BasicDomeItemRenderer extends GeoItemRenderer<BasicDomeItem> {
 
             // Fallback: If controller is not yet initialized or has no current animation, inspect ItemStack dome_state
             if (!isQuantumIdle) {
-                isQuantumIdle = BasicDomeItem.STATE_IDLE.equals(BasicDomeItem.getDomeState(this.currentItemStack));
+                isQuantumIdle = LiteSpaceDomeItem.STATE_IDLE.equals(LiteSpaceDomeItem.getDomeState(this.currentItemStack));
             }
 
             if (isQuantumIdle) {

@@ -1,13 +1,13 @@
 package com.ronicus.mechanized.content.device.dome.client;
 
 import com.ronicus.mechanized.Mechanized;
-import com.ronicus.mechanized.content.device.dome.BasicDomeItem;
+import com.ronicus.mechanized.content.device.dome.LiteSpaceDomeItem;
 import net.minecraft.resources.ResourceLocation;
 import software.bernie.geckolib.model.DefaultedItemGeoModel;
 
-public class BasicDomeItemModel extends DefaultedItemGeoModel<BasicDomeItem> {
-    public BasicDomeItemModel() {
-        super(ResourceLocation.fromNamespaceAndPath(Mechanized.MODID, "basic_dome"));
+public class LiteSpaceDomeItemModel extends DefaultedItemGeoModel<LiteSpaceDomeItem> {
+    public LiteSpaceDomeItemModel() {
+        super(ResourceLocation.fromNamespaceAndPath(Mechanized.MODID, "lite_space_dome"));
     }
 
     @Override

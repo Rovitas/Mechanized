@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "mechanized:block/energetic_flower",
-		"particle": "mechanized:block/energetic_flower"
+		"0": "mechanized:block/zoetic_bloom",
+		"particle": "mechanized:block/zoetic_bloom"
 	},
 	"elements": [
 		{

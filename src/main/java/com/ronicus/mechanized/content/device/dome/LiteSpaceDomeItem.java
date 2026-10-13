@@ -1,6 +1,6 @@
 package com.ronicus.mechanized.content.device.dome;
 
-import com.ronicus.mechanized.content.device.dome.client.BasicDomeItemRenderer;
+import com.ronicus.mechanized.content.device.dome.client.LiteSpaceDomeItemRenderer;
 import com.ronicus.mechanized.core.registry.ModItems;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
@@ -29,7 +29,7 @@ import software.bernie.geckolib.util.GeckoLibUtil;
 import java.util.List;
 import java.util.function.Consumer;
 
-public class BasicDomeItem extends Item implements GeoItem {
+public class LiteSpaceDomeItem extends Item implements GeoItem {
     public static final String STATE_TAG = "dome_state";
     public static final String STATE_STANDBY = "standby";
     public static final String STATE_IDLE = "idle";
@@ -43,7 +43,7 @@ public class BasicDomeItem extends Item implements GeoItem {
 
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 
-    public BasicDomeItem(Properties properties) {
+    public LiteSpaceDomeItem(Properties properties) {
         super(properties);
         SingletonGeoAnimatable.registerSyncedAnimatable(this);
     }
@@ -51,19 +51,19 @@ public class BasicDomeItem extends Item implements GeoItem {
     @Override
     public void createGeoRenderer(Consumer<GeoRenderProvider> consumer) {
         consumer.accept(new GeoRenderProvider() {
-            private BasicDomeItemRenderer renderer;
+            private LiteSpaceDomeItemRenderer renderer;
 
             @Override
             public BlockEntityWithoutLevelRenderer getGeoItemRenderer() {
                 if (this.renderer == null)
-                    this.renderer = new BasicDomeItemRenderer();
+                    this.renderer = new LiteSpaceDomeItemRenderer();
 
                 return this.renderer;
             }
         });
     }
 
-    private PlayState predicate(AnimationState<BasicDomeItem> state) {
+    private PlayState predicate(AnimationState<LiteSpaceDomeItem> state) {
         ItemStack stack = state.getData(DataTickets.ITEMSTACK);
         String domeState = getDomeState(stack);
 
@@ -116,7 +116,7 @@ public class BasicDomeItem extends Item implements GeoItem {
      * Useful for creative tab icons, recipe outputs, and GUI preview rendering.
      */
     public static ItemStack createStack(String state) {
-        ItemStack stack = new ItemStack(ModItems.BASIC_DOME.get());
+        ItemStack stack = new ItemStack(ModItems.LITE_SPACE_DOME.get());
         setDomeState(stack, state);
         return stack;
     }
@@ -146,10 +146,10 @@ public class BasicDomeItem extends Item implements GeoItem {
     public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
         boolean isActive = STATE_IDLE.equals(getDomeState(stack));
         Component stateText = isActive
-                ? Component.translatable("tooltip.mechanized.basic_dome.state.active").withStyle(ChatFormatting.GREEN)
-                : Component.translatable("tooltip.mechanized.basic_dome.state.inactive").withStyle(ChatFormatting.RED);
+                ? Component.translatable("tooltip.mechanized.lite_space_dome.state.active").withStyle(ChatFormatting.GREEN)
+                : Component.translatable("tooltip.mechanized.lite_space_dome.state.inactive").withStyle(ChatFormatting.RED);
 
-        tooltipComponents.add(Component.translatable("tooltip.mechanized.basic_dome.state", stateText).withStyle(ChatFormatting.GRAY));
+        tooltipComponents.add(Component.translatable("tooltip.mechanized.lite_space_dome.state", stateText).withStyle(ChatFormatting.GRAY));
         super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
     }
 }

@@ -1,15 +1,16 @@
 {
   "item_group.mechanized.main": "Mechanized",
 
-  "item.mechanized.basic_dome": "Basic Dome",
+  "item.mechanized.lite_space_dome": "Lite Space Dome",
   "item.mechanized.booster": "Booster",
 
-  "block.mechanized.energetic_flower": "Energetic Flower",
+  "block.mechanized.zoetic_bloom": "Zoetic Bloom",
+  "item.mechanized.zoetic_bloom": "Zoetic Bloom",
   "block.mechanized.dome_tuner": "Dome Tuner",
 
   "curios.identifier.bracelet": "Bracelet",
 
-  "tooltip.mechanized.basic_dome.state": "Status: %s",
-  "tooltip.mechanized.basic_dome.state.active": "Active",
-  "tooltip.mechanized.basic_dome.state.inactive": "Inactive"
+  "tooltip.mechanized.lite_space_dome.state": "Status: %s",
+  "tooltip.mechanized.lite_space_dome.state.active": "Active",
+  "tooltip.mechanized.lite_space_dome.state.inactive": "Inactive"
 }
