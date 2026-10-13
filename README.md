@@ -90,5 +90,4 @@ All balance parameters are thoroughly configurable and never hardcoded:
 ## 📜 License & Credits
 
 * Licensed under the **GNU General Public License v3.0 (GPL v3.0)**. Modpack inclusion and adaptations are warmly welcomed!
-* Repository: [GitHub - Rovitas/Mechanized](https://github.com/Rovitas/Mechanized)
 * Thanks to GeckoLib, Curios API, and the NeoForge open-source community.

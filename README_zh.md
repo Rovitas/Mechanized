@@ -89,5 +89,4 @@
 ## 📜 开源协议与鸣谢 (License & Credits)
 
 * 源码采用 **GNU 通用公共许可证第三版 (GPL v3.0)** 开源，欢迎在整合包中使用与二次创作！
-* 代码仓库：[GitHub - Rovitas/Mechanized](https://github.com/Rovitas/Mechanized)
 * 感谢 GeckoLib、Curios API 及 NeoForge 社区的开源支持。
