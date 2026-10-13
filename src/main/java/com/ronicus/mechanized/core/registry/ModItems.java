@@ -1,7 +1,8 @@
-package com.ronicus.mechanized;
+package com.ronicus.mechanized.core.registry;
 
-import com.ronicus.mechanized.device.BasicDomeItem;
-import com.ronicus.mechanized.device.DomeArmorItem;
+import com.ronicus.mechanized.Mechanized;
+import com.ronicus.mechanized.content.device.dome.BasicDomeItem;
+import com.ronicus.mechanized.content.device.dome.DomeArmorItem;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;

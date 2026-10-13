@@ -1,6 +1,6 @@
-package com.ronicus.mechanized.client.basic_dome;
+package com.ronicus.mechanized.content.device.dome.client;
 
-import com.ronicus.mechanized.device.BasicDomeItem;
+import com.ronicus.mechanized.content.device.dome.BasicDomeItem;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.renderer.GeoItemRenderer;
 

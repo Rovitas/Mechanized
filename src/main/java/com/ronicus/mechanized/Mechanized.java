@@ -1,5 +1,9 @@
 package com.ronicus.mechanized;
 
+import com.ronicus.mechanized.core.registry.ModBlockEntities;
+import com.ronicus.mechanized.core.registry.ModBlocks;
+import com.ronicus.mechanized.core.registry.ModItemGroups;
+import com.ronicus.mechanized.core.registry.ModItems;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 

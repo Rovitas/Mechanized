@@ -1,4 +1,4 @@
-package com.ronicus.mechanized.client.basic_dome;
+package com.ronicus.mechanized.content.device.dome.client;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;

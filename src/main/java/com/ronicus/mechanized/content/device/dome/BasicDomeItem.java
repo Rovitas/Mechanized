@@ -1,7 +1,7 @@
-package com.ronicus.mechanized.device;
+package com.ronicus.mechanized.content.device.dome;
 
-import com.ronicus.mechanized.ModItems;
-import com.ronicus.mechanized.client.basic_dome.BasicDomeItemRenderer;
+import com.ronicus.mechanized.content.device.dome.client.BasicDomeItemRenderer;
+import com.ronicus.mechanized.core.registry.ModItems;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.core.component.DataComponents;

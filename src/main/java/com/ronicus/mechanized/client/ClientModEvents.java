@@ -1,8 +1,8 @@
 package com.ronicus.mechanized.client;
 
 import com.ronicus.mechanized.Mechanized;
-import com.ronicus.mechanized.ModItems;
-import com.ronicus.mechanized.client.basic_dome.BasicDomeCurioRenderer;
+import com.ronicus.mechanized.content.device.dome.client.BasicDomeCurioRenderer;
+import com.ronicus.mechanized.core.registry.ModItems;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;

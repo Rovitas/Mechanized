@@ -1,4 +1,4 @@
-package com.ronicus.mechanized.machine;
+package com.ronicus.mechanized.content.machine.tuner;
 
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;

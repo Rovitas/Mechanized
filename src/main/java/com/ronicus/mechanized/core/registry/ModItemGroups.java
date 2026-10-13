@@ -1,6 +1,7 @@
-package com.ronicus.mechanized;
+package com.ronicus.mechanized.core.registry;
 
-import com.ronicus.mechanized.device.BasicDomeItem;
+import com.ronicus.mechanized.Mechanized;
+import com.ronicus.mechanized.content.device.dome.BasicDomeItem;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;

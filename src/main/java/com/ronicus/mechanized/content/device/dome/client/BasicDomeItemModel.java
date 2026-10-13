@@ -1,7 +1,7 @@
-package com.ronicus.mechanized.client.basic_dome;
+package com.ronicus.mechanized.content.device.dome.client;
 
 import com.ronicus.mechanized.Mechanized;
-import com.ronicus.mechanized.device.BasicDomeItem;
+import com.ronicus.mechanized.content.device.dome.BasicDomeItem;
 import net.minecraft.resources.ResourceLocation;
 import software.bernie.geckolib.model.DefaultedItemGeoModel;
 

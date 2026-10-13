@@ -1,6 +1,6 @@
-package com.ronicus.mechanized.machine;
+package com.ronicus.mechanized.content.machine.tuner;
 
-import com.ronicus.mechanized.ModBlockEntities;
+import com.ronicus.mechanized.core.registry.ModBlockEntities;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;

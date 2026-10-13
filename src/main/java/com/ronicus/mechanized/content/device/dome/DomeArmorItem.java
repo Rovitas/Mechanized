@@ -1,4 +1,4 @@
-package com.ronicus.mechanized.device;
+package com.ronicus.mechanized.content.device.dome;
 
 import com.ronicus.mechanized.Mechanized;
 import net.minecraft.resources.ResourceLocation;

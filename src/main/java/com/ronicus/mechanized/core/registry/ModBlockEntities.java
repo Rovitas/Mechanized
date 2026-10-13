@@ -1,6 +1,7 @@
-package com.ronicus.mechanized;
+package com.ronicus.mechanized.core.registry;
 
-import com.ronicus.mechanized.machine.DomeTunerBlockEntity;
+import com.ronicus.mechanized.Mechanized;
+import com.ronicus.mechanized.content.machine.tuner.DomeTunerBlockEntity;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.neoforge.registries.DeferredHolder;

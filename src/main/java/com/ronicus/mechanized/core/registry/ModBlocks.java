@@ -1,6 +1,7 @@
-package com.ronicus.mechanized;
+package com.ronicus.mechanized.core.registry;
 
-import com.ronicus.mechanized.machine.DomeTunerBlock;
+import com.ronicus.mechanized.Mechanized;
+import com.ronicus.mechanized.content.machine.tuner.DomeTunerBlock;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
