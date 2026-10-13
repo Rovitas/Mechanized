@@ -16,6 +16,9 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.minecraft.world.level.Level;
 
+/**
+ * Wearable armor item (such as booster boots) that grants movement and jump bonuses.
+ */
 public class DomeArmorItem extends Item implements Equipable {
     protected final ArmorItem.Type type;
 

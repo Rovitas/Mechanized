@@ -31,23 +31,23 @@ public class BasicDomeItemRenderer extends GeoItemRenderer<BasicDomeItem> {
 
             boolean isQuantumIdle = false;
             if (controller != null) {
-                // 如果当前控制器正在播放的动画包含 idle，或者当前基础状态是 IDLE
+                // Check if the current playing animation is "idle", or if base state is IDLE
                 software.bernie.geckolib.animation.AnimationProcessor.QueuedAnimation currentAnim = controller.getCurrentAnimation();
                 if (currentAnim != null && currentAnim.animation() != null) {
                     isQuantumIdle = "idle".equals(currentAnim.animation().name());
                 }
             }
 
-            // 兜底：如果控制器暂未初始化或无当前动画，回退检查物品本身的 dome_state
+            // Fallback: If controller is not yet initialized or has no current animation, inspect ItemStack dome_state
             if (!isQuantumIdle) {
                 isQuantumIdle = BasicDomeItem.STATE_IDLE.equals(BasicDomeItem.getDomeState(this.currentItemStack));
             }
 
             if (isQuantumIdle) {
                 float gameTime = (net.minecraft.client.Minecraft.getInstance().level != null ? net.minecraft.client.Minecraft.getInstance().level.getGameTime() : 0) + partialTick;
-                // 单个循环为 8 像素，在 32x32 贴图中跨度为 8.0f / 32.0f = 0.25f
+                // Single seamless scroll loop spans 8 pixels. In a 32x32 texture, UV step = 8.0f / 32.0f = 0.25f
                 float cycle = 8.0f / 32.0f;
-                float speed = 0.05f; // 横向滚动速度
+                float speed = 0.05f; // Horizontal scrolling speed
                 float uOffset = (gameTime * speed) % cycle;
 
                 com.mojang.blaze3d.vertex.VertexConsumer uvBuffer = new com.mojang.blaze3d.vertex.VertexConsumer() {

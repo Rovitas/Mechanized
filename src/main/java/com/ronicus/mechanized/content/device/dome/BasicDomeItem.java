@@ -89,7 +89,7 @@ public class BasicDomeItem extends Item implements GeoItem {
     }
 
     /**
-     * 获取指定 ItemStack 的状态字符串，默认为 "standby"
+     * Retrieves the dome state string of the specified ItemStack, defaulting to "standby".
      */
     public static String getDomeState(@Nullable ItemStack stack) {
         if (stack == null || stack.isEmpty()) return STATE_STANDBY;
@@ -102,7 +102,7 @@ public class BasicDomeItem extends Item implements GeoItem {
     }
 
     /**
-     * 设置指定 ItemStack 的状态字符串（如 "idle" / "standby"）
+     * Sets the dome state string for the specified ItemStack (e.g., "idle" or "standby").
      */
     public static void setDomeState(ItemStack stack, String state) {
         if (stack == null || stack.isEmpty()) return;
@@ -112,7 +112,8 @@ public class BasicDomeItem extends Item implements GeoItem {
     }
 
     /**
-     * 快捷创建一个带有指定状态的 ItemStack（方便创造栏图标、GUI 渲染等调用）
+     * Utility factory method to create an ItemStack with a pre-configured dome state.
+     * Useful for creative tab icons, recipe outputs, and GUI preview rendering.
      */
     public static ItemStack createStack(String state) {
         ItemStack stack = new ItemStack(ModItems.BASIC_DOME.get());
