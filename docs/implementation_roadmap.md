@@ -2,7 +2,7 @@
 
 ## 🎯 目标概述 (Goal Description)
 
-依据 [`docs/mechanized_development_plan.md`](file:///d:/Entertainment/MC/ModDevelopment/Mine/Mechanized-1.21.1-neoforge/docs/mechanized_development_plan.md) 的总体设计，建立覆盖 **全生命周期的任务清单与实施路线图**。
+依据 [`docs/design_and_architecture.md`](file:///d:/Entertainment/MC/ModDevelopment/Mine/Mechanized-1.21.1-neoforge/docs/design_and_architecture.md) 的总体设计，建立覆盖 **全生命周期的任务清单与实施路线图**。
 特别针对用户提出的两项前置修正诉求以及 Curios 佩戴渲染问题，将它们作为 **「Step 0：基础规范与命名对齐」** 优先嵌入到开发清单最前沿，形成自洽且平滑的推进闭环：
 1. **代码注释全量英文规范化**（Javadocs & inline comments 全部替换为规范英文）；
 2. **文档敲定命名对齐**（`energetic_flower` $\to$ `zoetic_bloom` 辉源花；`basic_dome` $\to$ `lite_space_dome` 轻量天幕手环，同步更新模型/贴图/动画/语言文件）；
