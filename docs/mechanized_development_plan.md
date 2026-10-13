@@ -324,73 +324,63 @@ flowchart TD
 
 ```
 com.ronicus.mechanized/
-├── Mechanized.java                     ← 模组入口
-├── ModBlocks.java                      ← 方块注册
-├── ModItems.java                       ← 物品注册
-├── ModBlockEntities.java               ← 方块实体注册
-├── ModItemGroups.java                  ← 创造标签注册
-├── ModFluids.java                      ← 液体注册
-├── ModMenuTypes.java                   ← 菜单类型注册
-├── ModRecipeTypes.java                 ← 配方类型注册
-├── ModDataComponents.java              ← 数据组件注册
-├── ModModules.java                     ← 模块类型注册
+├── Mechanized.java                     ← 模组主入口
 │
-├── device/                             ← 手持/穿戴设备
-│   ├── SpaceDomeItem.java              ← 【重构】通用手环物品
-│   ├── DomeTier.java                   ← 手环等级枚举
-│   ├── EnergyType.java                 ← 能量类型枚举
-│   ├── DomeArmorItem.java              ← 已有
-│   └── module/                         ← 模块子系统
-│       ├── ModuleType.java
-│       ├── InstalledModules.java
-│       └── ModuleEffectHandler.java
+├── core/                               ← 【核心基础设施层】（参考 AE2 / Create 基础层）
+│   ├── registry/                       ← 统一注册中心（Blocks, Items, BlockEntities, Menus, Recipes 等）
+│   ├── config/                         ← NeoForge ModConfig 配置中心（MechanizedConfig，管理平衡性参数）
+│   └── network/                        ← 统一网络数据包系统（Payloads, S2C/C2S 同步）
 │
-├── tool/                               ← 工具与防护
-│   ├── HammerItem.java                 ← 锤子
-│   ├── WeldingTorchItem.java           ← 充电式焊枪
-│   ├── SawItem.java                    ← 锯子
-│   ├── WeldingMaskItem.java            ← 焊接面具（副手）
-│   ├── SmartGogglesItem.java           ← 智能目镜（Curios）
-│   └── SignalLocatorItem.java          ← 异常信号定位仪
+├── api/                                ← 【接口层】（参考 Botania / Ars Nouveau 标准）
+│   ├── module/                         ← 模块标准化契约（IModule, ModuleCategory, ModuleContext）
+│   └── energy/                         ← 能量接口契约（IEnergyStorage 扩展、Zoetium 源质能量接口）
 │
-├── energy/                             ← 能量系统
-│   ├── StoredEnergy.java               ← DataComponent 物品储能
-│   ├── MachineEnergyStorage.java       ← 机器 FE 实现（推电/充电）
-│   └── EnergyUtils.java
+├── content/                            ← 【业务内容层】按子系统/玩法垂直切片（参考 Create / AE2）
+│   │
+│   ├── material/                       ← 基础原材料（钢材、硅晶片、粗坯等纯物品）
+│   │
+│   ├── device/                         ← 核心穿戴与便携设备（参考 Ars Nouveau）
+│   │   ├── dome/                       ← 空间穹顶手环系统（SpaceDomeItem, DomeTier, Curios 渲染与状态）
+│   │   ├── goggles/                    ← 智能目镜（SmartGogglesItem, 护眼判定, 专属渲染）
+│   │   └── locator/                    ← 异常信号定位仪（SignalLocatorItem, 结构感知与定位算法）
+│   │
+│   ├── module/                         ← 手环功能模块具体实现（高内聚自闭环）
+│   │   ├── booster/                    ← 推进机动模块（整合原靴子推进器）
+│   │   ├── mining/                     ← 辅助挖掘模块
+│   │   ├── magnet/                     ← 磁吸拾取模块
+│   │   ├── shield/                     ← 动能护盾模块
+│   │   └── siphon/                     ← Zoetium 源质虹吸模块
+│   │
+│   ├── tool/                           ← 工匠手工工具（铁砧式锻造锤、充电式电焊枪、切割锯、防护面具）
+│   │
+│   └── machine/                        ← 机器方块（各机器自闭环聚合 Block + BE + Menu + Screen）
+│       ├── forging/                    ← 工匠锻造台（ForgingTableBlock, BE, 营火式立体渲染, 无GUI交互）
+│       ├── generator/                  ← 燃料发电机（GeneratorBlock, BE, Menu, Screen, 内置充能槽与邻接推电）
+│       ├── charging/                   ← 充电台
+│       ├── analyzer/                   ← 智能分析仪（逆向解码原版物品与目镜数据）
+│       ├── tuner/                      ← 手环调整器（模块装卸与流体储罐）
+│       └── recycler/                   ← 金属废品回收炉
 │
-├── machine/                            ← 机器方块
-│   ├── base/                           ← 通用机器基类
-│   │   ├── MachineBlock.java
-│   │   ├── MachineBlockEntity.java
-│   │   └── MachineMenu.java
-│   ├── generator/                      ← 燃料发电机
-│   ├── charging/                       ← 充电台
-│   ├── forging/                        ← 工匠锻造台（无 GUI）
-│   ├── dome_tuner/                     ← 手环调整器
-│   ├── recycling/                      ← 回收炉
-│   ├── analyzer/                       ← 智能分析仪
-│   └── fabricator/                     ← 制造仪
+├── recipe/                             ← 【配方系统】自定义数据驱动配方
+│   ├── forging/                        ← 序列锻造配方（ForgeRecipe, ForgeRecipeSerializer）
+│   └── analyzer/                       ← 逆向分析配方（AnalyzerRecipe, AnalyzerRecipeSerializer）
 │
-├── fluid/                              ← 液体系统
-│   ├── SourceFluid.java
-│   └── SourceFluidType.java
+├── world/                              ← 【世界与探险层】（参考 暮色森林 The Twilight Forest）
+│   ├── fluid/                          ← Zoetium 源质液体（FluidType, FlowingFluid, LiquidBlock）
+│   ├── feature/                        ← 地表辉源花与地下源质池自然生成
+│   ├── structure/                      ← 废弃机械实验室（Abandoned Lab 遗迹结构）
+│   ├── dimension/                      ← 【Phase 4】机械纪元维度、生物群系与噪声地形
+│   └── progression/                    ← 【Phase 4】阶段限制、结界与主线进度锁
 │
-├── world/                              ← 世界生成
-│   ├── feature/
-│   ├── dimension/
-│   └── structure/                      ← 实验室结构
+├── client/                             ← 【客户端专属层】纯视觉呈现
+│   ├── hud/                            ← 智能目镜 HUD、装配步骤指引 HUD、定位仪方位指引
+│   ├── overlay/                        ← 焊接强光白屏/失明屏幕遮罩
+│   └── particle/                       ← Zoetium 青蓝微光粒子、焊接火花电弧粒子
 │
-├── entity/                             ← 实体/生物
-│
-└── client/                             ← 客户端渲染与 HUD
-    ├── ClientModEvents.java
-    ├── hud/
-    │   ├── SmartGogglesHud.java
-    │   └── SignalLocatorHud.java
-    └── renderer/
-        ├── SpaceDomeCurioRenderer.java
-        ├── ForgingTableRenderer.java
-        └── ...
+└── compat/                             ← 【生态兼容层】外部模组联动
+    ├── jei/                            ← JEI 序列锻造与分析配方查看集成
+    ├── emi/                            ← EMI 配方查看集成
+    └── curios/                         ← Curios 专属槽位驱动与数据包定义
 ```
 
 ---
