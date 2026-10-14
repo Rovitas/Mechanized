@@ -60,6 +60,11 @@ Switch active modules on the fly via an intuitive radial menu hotkey.
 * **Gateway Restoration**: Extract burnt gateway chips, solder repairs back at base, socket them back in, and ignite the portal with a bucket of liquid Zoetium.
 * **Dungeon Guardians & Blueprints**: Traverse fractured metallic biomes, confront automated sentinels, and challenge the final Ruler to claim the Prime Matrix.
 
+### 🤖 Silicon-Based Wonders: The Mechazoa & Replicas
+* **Naturally Evolved Silicon Ecology**: Entities in The Mechazoic are not cold manufactured automata, but indigenous **Mechazoa** and **Mechazoan** fauna evolved over eons. Their metal alloys and mechanical joints are as natural as bones and shells to Earth's carbon life.
+* **Handcrafted Replicas & Cube Folding**: Reverse-engineer Mechazoan physiology on your Machinist Bench to handcraft your own **Mechazoan Replica** companion. When depleted of energy or recalled, it module-folds like a Transformer into a compact 1x1 block cube.
+* **The Replica Cradle**: Slide folded companion cubes into base docks to recharge, perform automated repairs, and dispatch them for lightweight item logistics.
+
 ---
 
 ## 🗺️ Progression Overview
@@ -74,7 +79,7 @@ Switch active modules on the fly via an intuitive radial menu hotkey.
    Equip Smart Goggles and follow electromagnetic pulses across the underground using the Abnormal Signal Locator to uncover a long-lost abandoned cyber-laboratory.
 
 4. **The Mechazoic**  
-   Repair corrupted gateway logic chips and ignite the portal using liquid Zoetium. Cross over into The Mechazoic, overcome ancient ruin guardians, and triumph over the final Ruler to claim the matrix blueprints and ascend your wristgear into the Prime Space Dome.
+   Repair corrupted gateway logic chips and ignite the portal using liquid Zoetium. Cross over into The Mechazoic, study native Mechazoa ecology, handcraft folding Replica companions with Replica Cradles, and triumph over the final Ruler to ascend your wristgear into the Prime Space Dome.
 
 
 ---

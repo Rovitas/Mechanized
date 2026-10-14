@@ -44,6 +44,7 @@ flowchart TD
 - [ ] **Task 0.2：官方命名与本地化对齐 (Registry & Localization Alignment)**
   - **辉源花**：`energetic_flower` $\to$ `zoetic_bloom`（英文: `Zoetic Bloom`，中文: `辉源花`）。
   - **轻量手环**：`basic_dome` $\to$ `lite_space_dome`（英文: `Lite Space Dome`，中文: `轻量天幕手环`）。
+  - **设备调谐台**：`dome_tuner` $\to$ `harmonizer`（英文: `The Harmonizer`，中文: `设备调谐台`）。
   - 同步重命名资源：`textures/`, `models/`, `blockstates/`, `geo/`, `animations/`, `curios/tags/`。
 - [ ] **Task 0.3：Curios 佩戴手环渲染修复 (Curios Wrist Rendering Fix)**
   - 检查并修复 `BasicDomeCurioRenderer` 在玩家手臂上的矩阵变换（原点、旋转角、比例）；
@@ -76,14 +77,18 @@ flowchart TD
 
 ### 🟡 Phase 2：模块系统、机器与智能目镜 (v0.2.0-beta)
 
-> 目标：智能分析仪逆向图纸、手环调整器装载、智能目镜解锁与 HUD、环形轮盘
+> 目标：智能分析仪逆向图纸、设备调谐台装载、纳米消融装配渲染器、智能目镜解锁与 HUD、环形轮盘
 
 - [ ] **智能分析仪 (Smart Analyzer)**
   - 原版物品逆向解码机制（铁镐$\to$挖掘模块，羽毛/烟花$\to$推进模块等）；
-- [ ] **手环调整器 (Dome Tuner)**
-  - 完善调整器 GUI（模块插拔、充能注能）；
+- [ ] **设备调谐台 (The Harmonizer，原 Dome Tuner)**
+  - 完善调谐台方块 + BE + GUI（手环与设备模块插拔、源质流体储罐注能）；
 - [ ] **核心模块群**
   - ⛏️ 辅助挖掘模块、🚀 推进机动模块（重构整合原鞋子推进器）、🧲 磁吸模块、🛡️ 动能护盾模块、💧 源质虹吸模块；
+- [ ] **纳米消融/凝聚装配渲染器 (Nano Dissolve Renderer)**
+  - 零动画依赖设计，支持静态几何模型直接赋予消融动效；
+  - 顶点局部 Y 空间裁剪（Local Space Y），确保沿手臂方向推进；
+  - 接入双轨自适应（无光影走 Core Shader，开启光影走通用双 Pass Alpha Cutoff + Eyes 发光 Neon Bloom 通道）；
 - [ ] **智能目镜 (Smart Goggles)**
   - Curios `goggles` 槽位，夜视模式切换，主手持焊枪时展开全面罩动画；
   - 智能目镜 HUD（装配引导、野外灵感扫描高亮）；
@@ -108,16 +113,19 @@ flowchart TD
 
 ---
 
-### 🔵 Phase 4：机械纪元维度与板件使魔 (v1.0.0 正式版)
+### 🔵 Phase 4：机生种生态与机械纪元终局 (v1.0.0 正式版)
 
-> 目标：机械纪元生态、机械板件使魔与自动化作业坞、统治者 BOSS 决战与领袖升格
+> 目标：机械纪元维度、原生机生种（Mechazoa）与灵械兽（Mechazoan）、仿灵械兽（Mechazoan Replica）折叠立方体与仿械仓（Replica Cradle）、统治者决战与领袖升格
 
 - [ ] **机械纪元维度 (The Mechazoic)**
-  - 专属维度群系、失落文明废墟、机械矿物与生态植被；
-- [ ] **板件机械使魔体系 (PlaMonster 灵感)**
-  - 技师工作台切削机械板件（Runner Kit），拼装成使魔；
+  - 专属维度群系、失落文明废墟、机械矿物与硅基植被；
+- [ ] **原生机生种 (Mechazoa) 与仿灵械兽 (Mechazoan Replica)**
+  - 自然硅基生命生态架构；
+  - 技师工作台切削机械板件与芯片，手搓复刻仿灵械兽；
+  - 变形金刚式立方体收纳折叠形态（Cube Item）；
   - 四足兽型与双翼飞禽通用高复用骨骼；
-  - 随行随身模式（作战、动态光源、探测）与基地作业坞自动化搬运；
+- [ ] **仿械仓 (Replica Cradle Block + BE)**
+  - 基地停泊、休眠、充能、自动维护与轻量自动化物料调度；
 - [ ] **高阶制造与领袖升格**
   - 高级制造器多方块结构，打造制式天幕手环 (Common)；
   - 区域阶段 BOSS 与统治者 BOSS 决战，夺取核心蓝图完成领袖升格，铸就始初天幕手环 (Prime)！
@@ -132,12 +140,13 @@ flowchart TD
 
 ### 2. 官方命名与本地化对齐
 - **注册类重构**：
-  - `ModBlocks.ENERGETIC_FLOWER` $\to` `ModBlocks.ZOETIC_BLOOM`（注册名 `"zoetic_bloom"`）；
-  - `ModItems.BASIC_DOME` $\to` `ModItems.LITE_SPACE_DOME`（注册名 `"lite_space_dome"`）；
+  - `ModBlocks.ENERGETIC_FLOWER` $\to$ `ModBlocks.ZOETIC_BLOOM`（注册名 `"zoetic_bloom"`）；
+  - `ModItems.BASIC_DOME` $\to$ `ModItems.LITE_SPACE_DOME`（注册名 `"lite_space_dome"`）；
+  - `ModBlocks.DOME_TUNER` $\to$ `ModBlocks.HARMONIZER`（注册名 `"harmonizer"`）；
 - **类名重命名**：
-  - `BasicDomeItem.java` $\to` `LiteSpaceDomeItem.java`
-  - `BasicDomeItemModel.java` $\to` `LiteSpaceDomeItemModel.java`
-  - `BasicDomeItemRenderer.java` $\to` `LiteSpaceDomeItemRenderer.java`
+  - `BasicDomeItem.java` $\to$ `LiteSpaceDomeItem.java`
+  - `BasicDomeItemModel.java` $\to$ `LiteSpaceDomeItemModel.java`
+  - `BasicDomeItemRenderer.java` $\to$ `LiteSpaceDomeItemRenderer.java`
   - `BasicDomeCurioRenderer.java` $\to` `LiteSpaceDomeCurioRenderer.java`
 - **资源路径迁移**：
   - `assets/mechanized/textures/item/basic_dome.png` $\to` `lite_space_dome.png`
