@@ -17,10 +17,9 @@ public class ModItemGroups {
                     .title(Component.translatable("item_group.mechanized.main"))
                     .icon(() -> LiteSpaceDomeItem.createStack(LiteSpaceDomeItem.STATE_IDLE))
                     .displayItems((params, output) -> {
-                        output.accept(ModItems.BOOSTER.get());
                         output.accept(ModItems.LITE_SPACE_DOME.get());
                         output.accept(ModItems.ZOETIC_BLOOM.get());
-                        output.accept(ModItems.DOME_TUNER.get());
+                        output.accept(ModItems.HARMONIZER.get());
                     })
                     .build());
 }

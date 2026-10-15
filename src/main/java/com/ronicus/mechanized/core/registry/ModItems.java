@@ -21,5 +21,5 @@ public class ModItems {
 
     // Block Items
     public static final DeferredItem<BlockItem> ZOETIC_BLOOM = ITEMS.registerSimpleBlockItem("zoetic_bloom", ModBlocks.ZOETIC_BLOOM);
-    public static final DeferredItem<BlockItem> DOME_TUNER = ITEMS.registerSimpleBlockItem("dome_tuner", ModBlocks.DOME_TUNER);
+    public static final DeferredItem<BlockItem> HARMONIZER = ITEMS.registerSimpleBlockItem("harmonizer", ModBlocks.HARMONIZER);
 }

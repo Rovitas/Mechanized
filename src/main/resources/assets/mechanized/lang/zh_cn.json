@@ -6,7 +6,10 @@
 
   "block.mechanized.zoetic_bloom": "辉源花",
   "item.mechanized.zoetic_bloom": "辉源花",
-  "block.mechanized.dome_tuner": "手环调整器",
+  "block.mechanized.harmonizer": "设备调谐台",
+  "item.mechanized.harmonizer": "设备调谐台",
+  "block.mechanized.machinist_bench": "技师工作台",
+  "item.mechanized.machinist_bench": "技师工作台",
 
   "curios.identifier.bracelet": "手环",
 

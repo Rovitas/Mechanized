@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "mechanized:block/harmonizer"
+    },
+    "facing=east": {
+      "model": "mechanized:block/harmonizer",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "mechanized:block/harmonizer",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "mechanized:block/harmonizer",
+      "y": 270
+    }
+  }
+}

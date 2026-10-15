@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "mechanized:block/machinist_bench"
+    },
+    "facing=east": {
+      "model": "mechanized:block/machinist_bench",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "mechanized:block/machinist_bench",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "mechanized:block/machinist_bench",
+      "y": 270
+    }
+  }
+}

@@ -1,7 +1,7 @@
 package com.ronicus.mechanized.core.registry;
 
 import com.ronicus.mechanized.Mechanized;
-import com.ronicus.mechanized.content.machine.tuner.DomeTunerBlock;
+import com.ronicus.mechanized.content.machine.harmonizer.HarmonizerBlock;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -17,6 +17,6 @@ public class ModBlocks {
     public static final DeferredBlock<Block> ZOETIC_BLOOM = BLOCKS.register("zoetic_bloom",
             () -> new FlowerBlock(MobEffects.NIGHT_VISION, 5.0F, BlockBehaviour.Properties.ofFullCopy(Blocks.POPPY).instabreak().sound(SoundType.GRASS)));
 
-    public static final DeferredBlock<Block> DOME_TUNER = BLOCKS.register("dome_tuner",
-            () -> new DomeTunerBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK).noOcclusion()));
+    public static final DeferredBlock<Block> HARMONIZER = BLOCKS.register("harmonizer",
+            () -> new HarmonizerBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK).noOcclusion()));
 }

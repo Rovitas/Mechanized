@@ -124,6 +124,6 @@
     }
   },
   "textures": {
-    "particle": "mechanized:item/basic_dome"
+    "particle": "mechanized:item/lite_space_dome"
   }
 }

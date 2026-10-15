@@ -1,4 +1,4 @@
-package com.ronicus.mechanized.content.machine.tuner;
+package com.ronicus.mechanized.content.machine.harmonizer;
 
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
@@ -15,12 +15,12 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
-public class DomeTunerBlock extends BaseEntityBlock {
+public class HarmonizerBlock extends BaseEntityBlock {
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     protected static final VoxelShape SHAPE = Block.box(3.0D, 0.0D, 3.0D, 13.0D, 14.0D, 13.0D);
-    public static final MapCodec<DomeTunerBlock> CODEC = simpleCodec(DomeTunerBlock::new);
+    public static final MapCodec<HarmonizerBlock> CODEC = simpleCodec(HarmonizerBlock::new);
 
-    public DomeTunerBlock(Properties properties) {
+    public HarmonizerBlock(Properties properties) {
         super(properties);
         this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
     }
@@ -63,6 +63,6 @@ public class DomeTunerBlock extends BaseEntityBlock {
     @Nullable
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        return new DomeTunerBlockEntity(pos, state);
+        return new HarmonizerBlockEntity(pos, state);
     }
 }

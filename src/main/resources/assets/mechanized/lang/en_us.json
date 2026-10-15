@@ -6,7 +6,10 @@
 
   "block.mechanized.zoetic_bloom": "Zoetic Bloom",
   "item.mechanized.zoetic_bloom": "Zoetic Bloom",
-  "block.mechanized.dome_tuner": "Dome Tuner",
+  "block.mechanized.harmonizer": "The Harmonizer",
+  "item.mechanized.harmonizer": "The Harmonizer",
+  "block.mechanized.machinist_bench": "Machinist Bench",
+  "item.mechanized.machinist_bench": "Machinist Bench",
 
   "curios.identifier.bracelet": "Bracelet",
 

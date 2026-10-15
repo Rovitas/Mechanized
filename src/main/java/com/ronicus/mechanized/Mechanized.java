@@ -1,11 +1,13 @@
 package com.ronicus.mechanized;
 
+import com.ronicus.mechanized.client.ClientModEvents;
 import com.ronicus.mechanized.core.registry.ModBlockEntities;
 import com.ronicus.mechanized.core.registry.ModBlocks;
 import com.ronicus.mechanized.core.registry.ModItemGroups;
 import com.ronicus.mechanized.core.registry.ModItems;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.loading.FMLEnvironment;
 
 @Mod(Mechanized.MODID)
 public class Mechanized {
@@ -16,5 +18,10 @@ public class Mechanized {
         ModItems.ITEMS.register(modEventBus);
         ModBlockEntities.BLOCK_ENTITIES.register(modEventBus);
         ModItemGroups.CREATIVE_MODE_TABS.register(modEventBus);
+
+        if (FMLEnvironment.dist.isClient()) {
+            modEventBus.addListener(ClientModEvents::onClientSetup);
+            modEventBus.addListener(ClientModEvents::onAddLayers);
+        }
     }
 }
