@@ -39,16 +39,16 @@ flowchart TD
 
 ### 🔴 Step 0：基础规范、命名对齐与佩戴渲染（当前立即执行任务）
 
-- [ ] **Task 0.1：代码注释规范化 (English Comments Standard)**
+- [x] **Task 0.1：代码注释规范化 (English Comments Standard)**
   - 将所有 Java 类中的中文注释替换为规范地道的英文 Javadoc 与代码内联说明。
-- [ ] **Task 0.2：官方命名与本地化对齐 (Registry & Localization Alignment)**
+- [x] **Task 0.2：官方命名与本地化对齐 (Registry & Localization Alignment)**
   - **辉源花**：`energetic_flower` $\to$ `zoetic_bloom`（英文: `Zoetic Bloom`，中文: `辉源花`）。
   - **轻量手环**：`basic_dome` $\to$ `lite_space_dome`（英文: `Lite Space Dome`，中文: `轻量天幕手环`）。
   - **设备调谐台**：`dome_tuner` $\to$ `harmonizer`（英文: `The Harmonizer`，中文: `设备调谐台`）。
   - 同步重命名资源：`textures/`, `models/`, `blockstates/`, `geo/`, `animations/`, `curios/tags/`。
-- [ ] **Task 0.3：Curios 佩戴手环渲染修复 (Curios Wrist Rendering Fix)**
-  - 检查并修复 `BasicDomeCurioRenderer` 在玩家手臂上的矩阵变换（原点、旋转角、比例）；
-  - 接入动态姿态与 GeckoLib 动画同步，确保佩戴在手上时同样保持手环折叠/展开与 UV 滚动。
+- [x] **Task 0.3：Curios 佩戴手环渲染修复 (Curios Wrist Rendering Fix)**
+  - 还原 1.20.1 基线数值（`offsetY = 0.35`，`rotationX = 90.0`，`rotationY = 150.0`）；
+  - 迁移 NeoForge 客户端聊天调试拦截机制（支持 `bracelet offset/scale/rot/show/help` 游戏内实时微调）。
 
 ---
 
@@ -121,13 +121,17 @@ flowchart TD
   - 专属维度群系、失落文明废墟、机械矿物与硅基植被；
 - [ ] **原生机生种 (Mechazoa) 与仿灵械兽 (Mechazoan Replica)**
   - 自然硅基生命生态架构；
-  - 技师工作台切削机械板件与芯片，手搓复刻仿灵械兽；
+  - 分子烧结 3D 打印机切片分件打印（微折叠骨架、中枢芯片、微反应炉、合金外壳）；
+  - 技师工作台精密总装工序（锯切修模、电焊走线、注能唤醒、锤压咬合）；
   - 变形金刚式立方体收纳折叠形态（Cube Item）；
   - 四足兽型与双翼飞禽通用高复用骨骼；
+- [ ] **分子烧结 3D 打印机 (Molecular Sinterer)**
+  - 多方块结构（升降打印托盘 + 激光龙门架 + 耐高温玻璃罩）；
+  - 反向 Local Y 消融 Shader 逐层生长渲染与步进电机音效；
+  - 打印制式天幕手环 (Common Space Dome) 与高阶模块；
 - [ ] **仿械仓 (Replica Cradle Block + BE)**
   - 基地停泊、休眠、充能、自动维护与轻量自动化物料调度；
 - [ ] **高阶制造与领袖升格**
-  - 高级制造器多方块结构，打造制式天幕手环 (Common)；
   - 区域阶段 BOSS 与统治者 BOSS 决战，夺取核心蓝图完成领袖升格，铸就始初天幕手环 (Prime)！
 
 ---
