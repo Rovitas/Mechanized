@@ -54,17 +54,27 @@ public class ClientModEvents {
                         BraceletConfig.offsetX = x;
                         BraceletConfig.offsetY = y;
                         BraceletConfig.offsetZ = z;
-                        sendFeedback(String.format("Offset updated: %.3f, %.3f, %.3f", x, y, z));
+                        sendFeedback(String.format("Right Offset updated: %.3f, %.3f, %.3f", x, y, z));
                     } else {
                         sendError("Usage: bracelet offset <x> <y> <z>");
                     }
                 } else if ("scale".equals(command)) {
                     if (args.length == 2) {
                         float s = Float.parseFloat(args[1]);
-                        BraceletConfig.scale = s;
-                        sendFeedback(String.format("Scale updated: %.3f", s));
+                        BraceletConfig.scaleX = s;
+                        BraceletConfig.scaleY = s;
+                        BraceletConfig.scaleZ = s;
+                        sendFeedback(String.format("Right Scale updated: %.3f", s));
+                    } else if (args.length == 4) {
+                        float sx = Float.parseFloat(args[1]);
+                        float sy = Float.parseFloat(args[2]);
+                        float sz = Float.parseFloat(args[3]);
+                        BraceletConfig.scaleX = sx;
+                        BraceletConfig.scaleY = sy;
+                        BraceletConfig.scaleZ = sz;
+                        sendFeedback(String.format("Right Scale updated (3D): %.3f, %.3f, %.3f", sx, sy, sz));
                     } else {
-                        sendError("Usage: bracelet scale <value>");
+                        sendError("Usage: bracelet scale <s> OR bracelet scale <sx> <sy> <sz>");
                     }
                 } else if ("rot".equals(command)) {
                     if (args.length == 4) {
@@ -74,9 +84,55 @@ public class ClientModEvents {
                         BraceletConfig.rotationX = x;
                         BraceletConfig.rotationY = y;
                         BraceletConfig.rotationZ = z;
-                        sendFeedback(String.format("Rotation updated: %.3f, %.3f, %.3f", x, y, z));
+                        sendFeedback(String.format("Right Rotation updated: %.3f, %.3f, %.3f", x, y, z));
                     } else {
-                        sendError("Usage: bracelet rot <degrees>");
+                        sendError("Usage: bracelet rot <degreesX> <degreesY> <degreesZ>");
+                    }
+                } else if ("left".equals(command)) {
+                    if (args.length >= 2 && "offset".equals(args[1])) {
+                        if (args.length == 5) {
+                            float x = Float.parseFloat(args[2]);
+                            float y = Float.parseFloat(args[3]);
+                            float z = Float.parseFloat(args[4]);
+                            BraceletConfig.leftOffsetX = x;
+                            BraceletConfig.leftOffsetY = y;
+                            BraceletConfig.leftOffsetZ = z;
+                            sendFeedback(String.format("Left Offset updated: %.3f, %.3f, %.3f", x, y, z));
+                        } else {
+                            sendError("Usage: bracelet left offset <x> <y> <z>");
+                        }
+                    } else if (args.length >= 2 && "scale".equals(args[1])) {
+                        if (args.length == 3) {
+                            float s = Float.parseFloat(args[2]);
+                            BraceletConfig.leftScaleX = s;
+                            BraceletConfig.leftScaleY = s;
+                            BraceletConfig.leftScaleZ = s;
+                            sendFeedback(String.format("Left Scale updated: %.3f", s));
+                        } else if (args.length == 5) {
+                            float sx = Float.parseFloat(args[2]);
+                            float sy = Float.parseFloat(args[3]);
+                            float sz = Float.parseFloat(args[4]);
+                            BraceletConfig.leftScaleX = sx;
+                            BraceletConfig.leftScaleY = sy;
+                            BraceletConfig.leftScaleZ = sz;
+                            sendFeedback(String.format("Left Scale updated (3D): %.3f, %.3f, %.3f", sx, sy, sz));
+                        } else {
+                            sendError("Usage: bracelet left scale <s> OR bracelet left scale <sx> <sy> <sz>");
+                        }
+                    } else if (args.length >= 2 && "rot".equals(args[1])) {
+                        if (args.length == 5) {
+                            float x = Float.parseFloat(args[2]);
+                            float y = Float.parseFloat(args[3]);
+                            float z = Float.parseFloat(args[4]);
+                            BraceletConfig.leftRotationX = x;
+                            BraceletConfig.leftRotationY = y;
+                            BraceletConfig.leftRotationZ = z;
+                            sendFeedback(String.format("Left Rotation updated: %.3f, %.3f, %.3f", x, y, z));
+                        } else {
+                            sendError("Usage: bracelet left rot <degreesX> <degreesY> <degreesZ>");
+                        }
+                    } else {
+                        sendError("Usage: bracelet left <offset|scale|rot> ...");
                     }
                 } else if ("slim".equals(command)) {
                     if (args.length >= 2 && "offset".equals(args[1])) {
@@ -84,19 +140,37 @@ public class ClientModEvents {
                             float x = Float.parseFloat(args[2]);
                             BraceletConfig.slimOffsetX = x;
                             sendFeedback(String.format("Slim arm X offset updated: %.3f", x));
+                        } else if (args.length == 5) {
+                            float x = Float.parseFloat(args[2]);
+                            float y = Float.parseFloat(args[3]);
+                            float z = Float.parseFloat(args[4]);
+                            BraceletConfig.slimOffsetX = x;
+                            BraceletConfig.slimOffsetY = y;
+                            BraceletConfig.slimOffsetZ = z;
+                            sendFeedback(String.format("Slim arm Offset updated: %.3f, %.3f, %.3f", x, y, z));
                         } else {
-                            sendError("Usage: bracelet slim offset <x>");
+                            sendError("Usage: bracelet slim offset <x> [y] [z]");
                         }
                     } else if (args.length >= 2 && "scale".equals(args[1])) {
                         if (args.length == 3) {
                             float s = Float.parseFloat(args[2]);
-                            BraceletConfig.slimScale = s;
-                            sendFeedback(String.format("Slim arm scale updated: %.3f", s));
+                            BraceletConfig.slimScaleX = s;
+                            BraceletConfig.slimScaleY = s;
+                            BraceletConfig.slimScaleZ = s;
+                            sendFeedback(String.format("Slim arm scale multiplier updated: %.3f", s));
+                        } else if (args.length == 5) {
+                            float sx = Float.parseFloat(args[2]);
+                            float sy = Float.parseFloat(args[3]);
+                            float sz = Float.parseFloat(args[4]);
+                            BraceletConfig.slimScaleX = sx;
+                            BraceletConfig.slimScaleY = sy;
+                            BraceletConfig.slimScaleZ = sz;
+                            sendFeedback(String.format("Slim arm 3D scale multiplier updated: %.3f, %.3f, %.3f", sx, sy, sz));
                         } else {
-                            sendError("Usage: bracelet slim scale <value>");
+                            sendError("Usage: bracelet slim scale <val> OR bracelet slim scale <sx> <sy> <sz>");
                         }
                     } else {
-                        sendError("Usage: bracelet slim offset <x> OR bracelet slim scale <value>");
+                        sendError("Usage: bracelet slim <offset|scale> ...");
                     }
                 } else if ("show".equals(command)) {
                     showArgs();
@@ -128,13 +202,19 @@ public class ClientModEvents {
         Minecraft mc = Minecraft.getInstance();
         if (mc.player != null) {
             mc.player.displayClientMessage(Component.literal("§a=== Bracelet Debug Commands ==="), false);
-            mc.player.displayClientMessage(Component.literal("§7bracelet offset <x> <y> <z>"), false);
-            mc.player.displayClientMessage(Component.literal("§7bracelet scale <value>"), false);
-            mc.player.displayClientMessage(Component.literal("§7bracelet rot <X degrees> <Y degrees> <Z degrees>"), false);
-            mc.player.displayClientMessage(Component.literal("§7bracelet slim offset <x>"), false);
-            mc.player.displayClientMessage(Component.literal("§7bracelet slim scale <value>"), false);
-            mc.player.displayClientMessage(Component.literal("§7bracelet show (To show all arguments)"), false);
-            mc.player.displayClientMessage(Component.literal("§7=== Example: §fbracelet offset -0.05 0.35 0"), false);
+            mc.player.displayClientMessage(Component.literal("§7[Right Arm]:"), false);
+            mc.player.displayClientMessage(Component.literal("§f  bracelet offset <x> <y> <z>"), false);
+            mc.player.displayClientMessage(Component.literal("§f  bracelet scale <s> OR <sx> <sy> <sz>"), false);
+            mc.player.displayClientMessage(Component.literal("§f  bracelet rot <x> <y> <z>"), false);
+            mc.player.displayClientMessage(Component.literal("§7[Left Arm]:"), false);
+            mc.player.displayClientMessage(Component.literal("§f  bracelet left offset <x> <y> <z>"), false);
+            mc.player.displayClientMessage(Component.literal("§f  bracelet left scale <s> OR <sx> <sy> <sz>"), false);
+            mc.player.displayClientMessage(Component.literal("§f  bracelet left rot <x> <y> <z>"), false);
+            mc.player.displayClientMessage(Component.literal("§7[Slim Skin (Alex 3px)] (Ratio / Multiplier):"), false);
+            mc.player.displayClientMessage(Component.literal("§f  bracelet slim offset <x> [y] [z]"), false);
+            mc.player.displayClientMessage(Component.literal("§f  bracelet slim scale <mult> OR <sx> <sy> <sz>"), false);
+            mc.player.displayClientMessage(Component.literal("§7[General]:"), false);
+            mc.player.displayClientMessage(Component.literal("§f  bracelet show"), false);
         }
     }
 
@@ -143,12 +223,19 @@ public class ClientModEvents {
         if (mc.player != null) {
             String armType = (mc.player.getSkin().model() == PlayerSkin.Model.SLIM) ? "§bSlim (Alex 3px)" : "§eWide (Steve 4px)";
             String mainHand = mc.player.getMainArm().name();
-            mc.player.displayClientMessage(Component.literal("§a=== Bracelet Arguments ==="), false);
+            mc.player.displayClientMessage(Component.literal("§a=== Bracelet Current Arguments ==="), false);
             mc.player.displayClientMessage(Component.literal("§7Player Arm: " + armType + " | Main Arm: §f" + mainHand), false);
-            mc.player.displayClientMessage(Component.literal(String.format("Base Offset: %.3f, %.3f, %.3f", BraceletConfig.offsetX, BraceletConfig.offsetY, BraceletConfig.offsetZ)), false);
-            mc.player.displayClientMessage(Component.literal(String.format("Base Scale: %.3f", BraceletConfig.scale)), false);
-            mc.player.displayClientMessage(Component.literal(String.format("Base Rotation: %.3f, %.3f, %.3f", BraceletConfig.rotationX, BraceletConfig.rotationY, BraceletConfig.rotationZ)), false);
-            mc.player.displayClientMessage(Component.literal(String.format("Slim Arm Offset X: %.3f | Slim Scale: %.3f", BraceletConfig.slimOffsetX, BraceletConfig.slimScale)), false);
+            mc.player.displayClientMessage(Component.literal(String.format("Right: offset=(%.3f, %.3f, %.3f), rot=(%.3f, %.3f, %.3f), scale=(%.3f, %.3f, %.3f)",
+                    BraceletConfig.offsetX, BraceletConfig.offsetY, BraceletConfig.offsetZ,
+                    BraceletConfig.rotationX, BraceletConfig.rotationY, BraceletConfig.rotationZ,
+                    BraceletConfig.scaleX, BraceletConfig.scaleY, BraceletConfig.scaleZ)), false);
+            mc.player.displayClientMessage(Component.literal(String.format("Left:  offset=(%.3f, %.3f, %.3f), rot=(%.3f, %.3f, %.3f), scale=(%.3f, %.3f, %.3f)",
+                    BraceletConfig.leftOffsetX, BraceletConfig.leftOffsetY, BraceletConfig.leftOffsetZ,
+                    BraceletConfig.leftRotationX, BraceletConfig.leftRotationY, BraceletConfig.leftRotationZ,
+                    BraceletConfig.leftScaleX, BraceletConfig.leftScaleY, BraceletConfig.leftScaleZ)), false);
+            mc.player.displayClientMessage(Component.literal(String.format("Slim:  offset=(%.3f, %.3f, %.3f), scaleMult=(%.3f, %.3f, %.3f)",
+                    BraceletConfig.slimOffsetX, BraceletConfig.slimOffsetY, BraceletConfig.slimOffsetZ,
+                    BraceletConfig.slimScaleX, BraceletConfig.slimScaleY, BraceletConfig.slimScaleZ)), false);
             mc.player.displayClientMessage(Component.literal("§a=== Arguments END ==="), false);
         }
     }

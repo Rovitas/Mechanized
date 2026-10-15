@@ -41,18 +41,24 @@ public class LiteSpaceDomeCurioRenderer implements ICurioRenderer {
 
         humanoidModel.translateToHand(arm, poseStack);
 
-        float scale = isSlim ? BraceletConfig.slimScale : BraceletConfig.scale;
-        float baseOffsetX = BraceletConfig.offsetX + (isSlim ? BraceletConfig.slimOffsetX : 0.0f);
-        float offsetX = isLeftArm ? -baseOffsetX : baseOffsetX;
-        float offsetY = BraceletConfig.offsetY;
-        float offsetZ = BraceletConfig.offsetZ;
+        float scaleX = (isLeftArm ? BraceletConfig.leftScaleX : BraceletConfig.scaleX) * (isSlim ? BraceletConfig.slimScaleX : 1.0f);
+        float scaleY = (isLeftArm ? BraceletConfig.leftScaleY : BraceletConfig.scaleY) * (isSlim ? BraceletConfig.slimScaleY : 1.0f);
+        float scaleZ = (isLeftArm ? BraceletConfig.leftScaleZ : BraceletConfig.scaleZ) * (isSlim ? BraceletConfig.slimScaleZ : 1.0f);
 
-        float rotX = BraceletConfig.rotationX;
-        float rotY = isLeftArm ? -BraceletConfig.rotationY : BraceletConfig.rotationY;
-        float rotZ = isLeftArm ? -BraceletConfig.rotationZ : BraceletConfig.rotationZ;
+        float slimShiftX = isSlim ? (isLeftArm ? -BraceletConfig.slimOffsetX : BraceletConfig.slimOffsetX) : 0.0f;
+        float slimShiftY = isSlim ? BraceletConfig.slimOffsetY : 0.0f;
+        float slimShiftZ = isSlim ? BraceletConfig.slimOffsetZ : 0.0f;
+
+        float offsetX = (isLeftArm ? BraceletConfig.leftOffsetX : BraceletConfig.offsetX) + slimShiftX;
+        float offsetY = (isLeftArm ? BraceletConfig.leftOffsetY : BraceletConfig.offsetY) + slimShiftY;
+        float offsetZ = (isLeftArm ? BraceletConfig.leftOffsetZ : BraceletConfig.offsetZ) + slimShiftZ;
+
+        float rotX = isLeftArm ? BraceletConfig.leftRotationX : BraceletConfig.rotationX;
+        float rotY = isLeftArm ? BraceletConfig.leftRotationY : BraceletConfig.rotationY;
+        float rotZ = isLeftArm ? BraceletConfig.leftRotationZ : BraceletConfig.rotationZ;
 
         poseStack.translate(offsetX, offsetY, offsetZ);
-        poseStack.scale(scale, scale, scale);
+        poseStack.scale(scaleX, scaleY, scaleZ);
         poseStack.mulPose(Axis.XP.rotationDegrees(rotX));
         poseStack.mulPose(Axis.YP.rotationDegrees(rotY));
         poseStack.mulPose(Axis.ZP.rotationDegrees(rotZ));
