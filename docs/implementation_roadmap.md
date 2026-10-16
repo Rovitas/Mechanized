@@ -48,7 +48,8 @@ flowchart TD
   - 同步重命名资源：`textures/`, `models/`, `blockstates/`, `geo/`, `animations/`, `curios/tags/`。
 - [x] **Task 0.3：Curios 佩戴手环渲染修复 (Curios Wrist Rendering Fix)**
   - 还原 1.20.1 基线数值（`offsetY = 0.35`，`rotationX = 90.0`，`rotationY = 150.0`）；
-  - 迁移 NeoForge 客户端聊天调试拦截机制（支持 `bracelet offset/scale/rot/show/help` 游戏内实时微调）。
+  - 迁移 NeoForge 客户端聊天调试拦截机制（支持 `bracelet offset/scale/rot/show/help` 游戏内实时微调）；
+  - 接入 NeoForge 客户端 `RenderArmEvent` 官方事件，实现第一人称主视角左手手环佩戴渲染与暗光幽蓝自发光。
 
 ---
 
@@ -71,7 +72,10 @@ flowchart TD
   - 实现自定义装配配方类型 `AssemblyRecipe`（4 步工序）与废品回收逻辑；
 - [ ] **手环体系与通用类**
   - 提取通用 `SpaceDomeItem` 基类与 `DomeTier` 枚举；
-  - 完成轻量天幕手环手搓配方。
+  - 完成轻量天幕手环手搓配方；
+- [ ] **创造物品栏规范化排版 (Creative Tab Organization)**
+  - 实现 `CreativeTabSeparatorItem` 章节标题项与 9 格自动补齐对齐逻辑；
+  - 规范化组织【Ⅰ.材料与工具】至【Ⅵ.源质生态与遗迹】六大章节。
 
 ---
 
