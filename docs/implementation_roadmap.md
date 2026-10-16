@@ -1,5 +1,17 @@
 # 📋 Mechanized 架构对齐与总体开发实施方案 (Implementation Plan)
 
+## 📋 快速导航目录
+- [[#🎯 目标概述 (Goal Description)]]
+- [[#👥 用户审核事项 (User Review Required)]]
+- [[#🗺️ 全局开发清单与阶段映射 (Roadmap & Checklist)]]
+  - [[#🔴 Step 0：基础规范、命名对齐与佩戴渲染（当前立即执行任务）]]
+  - [[#🔴 Phase 1：基础材料 & 能量 & 核心制造 (v0.1.0-alpha)]]
+  - [[#🟡 Phase 2：智能分析、模块扩展与 HUD 目镜 (v0.2.0-beta)]]
+  - [[#🟣 Phase 3：遗迹探索、源质生态与传送中枢 (v0.3.0)]]
+  - [[#👑 Phase 4：机械纪元维度、使魔坞站与升格终局 (v1.0.0)]]
+
+---
+
 ## 🎯 目标概述 (Goal Description)
 
 依据 [`docs/design_and_architecture.md`](file:///d:/Entertainment/MC/ModDevelopment/Mine/Mechanized-1.21.1-neoforge/docs/design_and_architecture.md) 的总体设计，建立覆盖 **全生命周期的任务清单与实施路线图**。
