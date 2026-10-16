@@ -63,4 +63,5 @@ repo/
 AGENTS.md
 .agents/
 docs/agent_dispatch.md
+docs/developer_workflow_faq.md
 scripts/
