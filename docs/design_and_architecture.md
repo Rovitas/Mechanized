@@ -237,6 +237,19 @@ flowchart TD
 * **基地充能**：设备调谐台（The Harmonizer，ID `harmonizer`）接入流体储罐，放入手环快速注入 Zoetium。
 * **野外充能（源质虹吸模块）**：搭载该模块后，玩家佩戴手环浸入 Zoetium 池，手环会缓慢虹吸能量被动回能。
 
+### 哲学定位与沉浸交互：特摄变身器与科幻万用中枢的终极融合（The Universal Conduit Spec · 已确定 ✅）
+* **设计原型与美学对标**：
+  * **特摄战队核心终端**：汲取《爆上战队奔奔者》奔奔变身器（BOONBOOM CHANGER）的日常仪表、战术变身与载具召唤一体化哲学，以及《虫王战队超王者》王者圣剑·零式（Ohger Calibur ZERO）的君王血统认证与巨构操纵密钥设计；
+  * **硬科幻万用工具**：融合《质量效应》Omni-Tool 与《辐射》Pip-Boy 的随身终端体验，彻底解决传统科技模组“快捷栏塞满扳手、测电笔、呼叫笛、辐射计”的割裂与背包臃肿痛点。
+* **三大体验层级（Tri-State Experience）**：
+  1. **日常态（Utility & Telemetry）**：手腕环境辐射监测、源质储量投射、穹顶健康度、无感微型 HUD；
+  2. **战术态（Combat & Tactical Action）**：模块纳米展开、动能护盾偏折、紧急动能喷射；
+  3. **同调唤醒态（Summon & Overdrive）**：充当仿灵械兽魔方（Cube Form）的共鸣展开源，以及高阶遗迹防壁的物理主权密钥。
+* **三大令肾上腺素飙升的视听与沉浸细节（Henshin & Sci-Fi Immersion Details）**：
+  1. **机械卡扣与通电自检音效（Tactile Mechanical Feedback）**：装备手环或在设备调谐台（The Harmonizer）插拔芯片模块时，伴随工业级清脆机械锁死卡扣音（Click-Clack）与微型高频伺服电机自检啸叫、源质导通蜂鸣；
+  2. **抬腕姿态与光子全息轮盘（Wrist-Raise Hologram HUD）**：长按按键呼出环形轮盘（Radial Menu）时，第一人称/第三人称呈现轻微抬腕看表动作，小臂上方浮现半透明悬浮光子操作环（支持滚轮盲切）；
+  3. **基座合体插槽与主权识别（Docking Key & Ruler Authority）**：高阶多方块设施（如 Prime 穹顶核心、高能中控台、未来重型载具驾驶席）设有手环物理合体插槽，手环嵌入后作为生物算力超频与支配者权限密钥，瞬间点亮整座基座。
+
 ---
 
 ## 7. 系统五：模块系统 & 智能目镜
