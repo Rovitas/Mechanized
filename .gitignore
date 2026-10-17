@@ -61,7 +61,7 @@ repo/
 
 ### Vibe-coding ###
 AGENTS.md
-.agents/
+docs/rules/
 docs/agent_dispatch.md
 docs/developer_workflow_faq.md
 scripts/
