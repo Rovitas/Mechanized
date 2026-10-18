@@ -97,8 +97,16 @@
 - [ ] **智能分析仪 (Smart Analyzer)**
   - 原版物品逆向解码机制（铁镐$\to$挖掘模块，羽毛/烟花$\to$推进模块等）；
 - [ ] **设备调谐台 (The Harmonizer，原 Dome Tuner)**
-  - 完善调谐台方块 + BE + GUI（手环与设备模块插拔、源质流体储罐注能）；
-  - 注册模块插拔物理卡扣音（Click-Clack）与微型伺服电机自检/源质导通蜂鸣；
+  - [x] **美术与动画资产 (Art & Animation): 已就绪 ✅【Art 席位已验收】**
+    - [x] 材质贴图：钛青深空夜色 + 阳极氧化铝冷白 32×32 展开高反差贴图（`harmonizer.png`）；
+    - [x] 几何模型：原点居中、两格高宏伟展台、中间 360° 开阔通透的 GeckoLib 骨骼模型（`harmonizer.geo.json`）；
+    - [x] 弹性机械动效：蓄能喷射升空（`deploy`）、2 像素磁气垫浮动（`idle`）、电磁活塞冲压高频共振（`working`）三套力量感动画（`harmonizer.animation.json`）；
+    - [x] 规范落盘与归档：已于 Blockbench 实机验收，代码库已通过 Git Commit (`eb2fc4b`) 归档。
+  - [ ] **Java 业务代码与渲染器 (Java Code & Renderer): 待实现 ⏳【待 Code 席位接手】**
+    - [ ] 方块本体：实现 `HarmonizerBlock`（两格高多方块/碰撞盒属性、右键交互放置手环）；
+    - [ ] 方块实体：实现 `HarmonizerBlockEntity`（物品存储、网络数据包同步与源质注能缓存）；
+    - [ ] GeckoLib 渲染器：编写 `HarmonizerBlockRenderer`（绑定 Geo 模型与动画控制器，并在中央镂空处驱动物品/手环的 3D 浮空自转渲染）；
+    - [ ] 调谐交互与音效：手环与设备模块插拔、源质流体注能、注册物理卡扣音（Click-Clack）与微型伺服电机自检蜂鸣。
 - [ ] **核心模块群**
   - ⛏️ 辅助挖掘模块、🚀 推进机动模块（重构整合原鞋子推进器）、🧲 磁吸模块、🛡️ 动能护盾模块、💧 源质虹吸模块；
 - [ ] **纳米消融/凝聚装配渲染器 (Nano Dissolve Renderer)**
