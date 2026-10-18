@@ -1,0 +1,499 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.machinist_bench",
+        "texture_width": 64,
+        "texture_height": 64,
+        "visible_bounds_width": 3,
+        "visible_bounds_height": 2,
+        "visible_bounds_offset": [
+          0,
+          0.5,
+          0
+        ]
+      },
+      "bones": [
+        {
+          "name": "bone_base",
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "cubes": [
+            {
+              "name": "footpad_left",
+              "origin": [
+                -15,
+                0,
+                -7
+              ],
+              "size": [
+                8,
+                2,
+                14
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    16,
+                    34
+                  ],
+                  "uv_size": [
+                    8,
+                    2
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    16,
+                    34
+                  ],
+                  "uv_size": [
+                    8,
+                    2
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    16,
+                    32
+                  ],
+                  "uv_size": [
+                    14,
+                    2
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    16,
+                    32
+                  ],
+                  "uv_size": [
+                    14,
+                    2
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    0,
+                    32
+                  ],
+                  "uv_size": [
+                    8,
+                    14
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    8,
+                    32
+                  ],
+                  "uv_size": [
+                    8,
+                    14
+                  ]
+                }
+              }
+            },
+            {
+              "name": "footpad_right",
+              "origin": [
+                7,
+                0,
+                -7
+              ],
+              "size": [
+                8,
+                2,
+                14
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    16,
+                    34
+                  ],
+                  "uv_size": [
+                    8,
+                    2
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    16,
+                    34
+                  ],
+                  "uv_size": [
+                    8,
+                    2
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    16,
+                    32
+                  ],
+                  "uv_size": [
+                    14,
+                    2
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    16,
+                    32
+                  ],
+                  "uv_size": [
+                    14,
+                    2
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    0,
+                    32
+                  ],
+                  "uv_size": [
+                    8,
+                    14
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    8,
+                    32
+                  ],
+                  "uv_size": [
+                    8,
+                    14
+                  ]
+                }
+              }
+            },
+            {
+              "name": "stanchion_left",
+              "origin": [
+                -14,
+                2,
+                -6
+              ],
+              "size": [
+                6,
+                9,
+                12
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    12,
+                    20
+                  ],
+                  "uv_size": [
+                    6,
+                    9
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    12,
+                    20
+                  ],
+                  "uv_size": [
+                    6,
+                    9
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    18,
+                    20
+                  ],
+                  "uv_size": [
+                    12,
+                    9
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    0,
+                    20
+                  ],
+                  "uv_size": [
+                    12,
+                    9
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    30,
+                    20
+                  ],
+                  "uv_size": [
+                    6,
+                    12
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    30,
+                    20
+                  ],
+                  "uv_size": [
+                    6,
+                    12
+                  ]
+                }
+              }
+            },
+            {
+              "name": "stanchion_right",
+              "origin": [
+                8,
+                2,
+                -6
+              ],
+              "size": [
+                6,
+                9,
+                12
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    12,
+                    20
+                  ],
+                  "uv_size": [
+                    6,
+                    9
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    12,
+                    20
+                  ],
+                  "uv_size": [
+                    6,
+                    9
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    0,
+                    20
+                  ],
+                  "uv_size": [
+                    12,
+                    9
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    18,
+                    20
+                  ],
+                  "uv_size": [
+                    12,
+                    9
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    30,
+                    20
+                  ],
+                  "uv_size": [
+                    6,
+                    12
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    30,
+                    20
+                  ],
+                  "uv_size": [
+                    6,
+                    12
+                  ]
+                }
+              }
+            },
+            {
+              "name": "tie_beam",
+              "origin": [
+                -8,
+                3,
+                -2
+              ],
+              "size": [
+                16,
+                2,
+                4
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    0,
+                    48
+                  ],
+                  "uv_size": [
+                    16,
+                    2
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    0,
+                    48
+                  ],
+                  "uv_size": [
+                    16,
+                    2
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    16,
+                    48
+                  ],
+                  "uv_size": [
+                    4,
+                    2
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    16,
+                    48
+                  ],
+                  "uv_size": [
+                    4,
+                    2
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    0,
+                    50
+                  ],
+                  "uv_size": [
+                    16,
+                    4
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    0,
+                    50
+                  ],
+                  "uv_size": [
+                    16,
+                    4
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "bone_table",
+          "pivot": [
+            0,
+            11,
+            0
+          ],
+          "cubes": [
+            {
+              "name": "worktop_plate",
+              "origin": [
+                -16,
+                11,
+                -8
+              ],
+              "size": [
+                32,
+                3,
+                16
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    0,
+                    16
+                  ],
+                  "uv_size": [
+                    32,
+                    3
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    0,
+                    16
+                  ],
+                  "uv_size": [
+                    32,
+                    3
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    32,
+                    16
+                  ],
+                  "uv_size": [
+                    16,
+                    3
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    32,
+                    16
+                  ],
+                  "uv_size": [
+                    16,
+                    3
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    0,
+                    0
+                  ],
+                  "uv_size": [
+                    32,
+                    16
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    32,
+                    0
+                  ],
+                  "uv_size": [
+                    32,
+                    16
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "bone_items",
+          "pivot": [
+            0,
+            14,
+            0
+          ]
+        }
+      ]
+    }
+  ]
+}
