@@ -4,7 +4,7 @@
 - [[#🎯 目标概述 (Goal Description)]]
 - [[#👥 用户审核事项 (User Review Required)]]
 - [[#🗺️ 全局开发清单与阶段映射 (Roadmap & Checklist)]]
-  - [[#🔴 Step 0：基础规范、命名对齐与佩戴渲染（当前立即执行任务）]]
+  - [[#🟢 Step 0：基础规范、命名对齐与佩戴渲染 [已竣工 ✅]]]
   - [[#🔴 Phase 1：基础材料 & 能量 & 核心制造 (v0.1.0-alpha)]]
   - [[#🟡 Phase 2：智能分析、模块扩展与 HUD 目镜 (v0.2.0-beta)]]
   - [[#🟣 Phase 3：遗迹探索、源质生态与传送中枢 (v0.3.0)]]
@@ -48,7 +48,7 @@
 > * **【Phase 3: 探索与启示】**：Zoetium 源质液体 + 辉源花生态 + 废弃实验室 + 信号定位仪 + 传送门；  
 > * **【Phase 4: 机械纪元终局】**：机械纪元维度 + 板件机械使魔 + 制式/始初手环升格 + 统治者决战。
 
-### 🔴 Step 0：基础规范、命名对齐与佩戴渲染（当前立即执行任务）
+### 🟢 Step 0：基础规范、命名对齐与佩戴渲染 [已竣工 ✅]
 
 - [x] **Task 0.1：代码注释规范化 (English Comments Standard)**
   - 将所有 Java 类中的中文注释替换为规范地道的英文 Javadoc 与代码内联说明。
@@ -60,7 +60,8 @@
 - [x] **Task 0.3：Curios 佩戴手环渲染修复 (Curios Wrist Rendering Fix)**
   - 还原 1.20.1 基线数值（`offsetY = 0.35`，`rotationX = 90.0`，`rotationY = 150.0`）；
   - 迁移 NeoForge 客户端聊天调试拦截机制（支持 `bracelet offset/scale/rot/show/help` 游戏内实时微调）；
-  - 接入 NeoForge 客户端 `RenderArmEvent` 官方事件，实现第一人称主视角左手手环佩戴渲染与暗光幽蓝自发光。
+  - 接入 NeoForge 客户端 `RenderArmEvent` 官方事件，实现第一人称主视角左手手环佩戴渲染与暗光幽蓝自发光；
+  - 经实机多轮测算校准，手环几何空腔修正为正方形（`lite_space_dome.geo.json`），四套独立臂型预设全量固化（`BraceletConfig.java`），并通过 `commit 4d4fabd` 正式归档。
 
 ---
 
