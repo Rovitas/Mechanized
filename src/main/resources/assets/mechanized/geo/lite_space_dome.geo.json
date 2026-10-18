@@ -60,16 +60,16 @@
 					"cubes": [
 						{
 							"origin": [-2, 6, -2],
-							"size": [8, 1, 4],
-							"pivot": [4, 6, 1],
+							"size": [10, 1, 4],
+							"pivot": [5, 6, 1],
 							"rotation": [0, 0, 90],
 							"uv": {
 								"north": {"uv": [0, 9], "uv_size": [8, 1]},
-								"east": {"uv": [9, 9], "uv_size": [4, 1]},
+								"east": {"uv": [9, 4], "uv_size": [4, 1]},
 								"south": {"uv": [0, 9], "uv_size": [8, 1]},
-								"west": {"uv": [8, 9], "uv_size": [4, 1]},
-								"up": {"uv": [0, 5], "uv_size": [8, 4]},
-								"down": {"uv": [8, 9], "uv_size": [8, -4]}
+								"west": {"uv": [9, 4], "uv_size": [4, 1]},
+								"up": {"uv": [0, 0], "uv_size": [9, 4]},
+								"down": {"uv": [9, 4], "uv_size": [9, -4]}
 							}
 						}
 					]

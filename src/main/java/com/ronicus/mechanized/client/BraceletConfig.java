@@ -44,11 +44,11 @@ public class BraceletConfig {
         }
     }
 
-    // Default reference presets for each of the 4 arm profiles
-    private static final Transform DEFAULT_RIGHT_WIDE = new Transform(-0.075f, 0.40f, 0.0f, 0.500f, 0.5f, 0.5f, 90.0f, 150.0f, 0.0f);
-    private static final Transform DEFAULT_RIGHT_SLIM = new Transform(-0.075f, 0.40f, 0.0f, 0.425f, 0.5f, 0.5f, 90.0f, 150.0f, 0.0f);
-    private static final Transform DEFAULT_LEFT_WIDE  = new Transform( 0.075f, 0.40f, 0.0f, 0.500f, 0.5f, 0.5f, 90.0f, -150.0f, 180.0f);
-    private static final Transform DEFAULT_LEFT_SLIM  = new Transform( 0.075f, 0.40f, 0.0f, 0.425f, 0.5f, 0.5f, 90.0f, -150.0f, 180.0f);
+    // Default reference presets for each of the 4 arm profiles (User calibrated)
+    private static final Transform DEFAULT_RIGHT_WIDE = new Transform(-0.095f, 0.4f, 0.0f, 0.5f, 0.5f, 0.5f, 90.0f,  150.0f,   0.0f);
+    private static final Transform DEFAULT_RIGHT_SLIM = new Transform(-0.085f, 0.4f, 0.0f, 0.36f, 0.5f, 0.5f, 90.0f,  150.0f,   0.0f);
+    private static final Transform DEFAULT_LEFT_WIDE  = new Transform( 0.095f, 0.4f, 0.0f, 0.5f, 0.5f, 0.5f, 90.0f, -150.0f, 180.0f);
+    private static final Transform DEFAULT_LEFT_SLIM  = new Transform( 0.085f, 0.4f, 0.0f, 0.36f, 0.5f, 0.5f, 90.0f, -150.0f, 180.0f);
 
     // Active mutable instances
     public static final Transform RIGHT_WIDE = DEFAULT_RIGHT_WIDE.copy();
