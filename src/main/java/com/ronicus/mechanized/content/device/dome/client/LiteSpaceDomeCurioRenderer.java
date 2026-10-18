@@ -41,27 +41,13 @@ public class LiteSpaceDomeCurioRenderer implements ICurioRenderer {
 
         humanoidModel.translateToHand(arm, poseStack);
 
-        float scaleX = (isLeftArm ? BraceletConfig.leftScaleX : BraceletConfig.scaleX) * (isSlim ? BraceletConfig.slimScaleX : 1.0f);
-        float scaleY = (isLeftArm ? BraceletConfig.leftScaleY : BraceletConfig.scaleY) * (isSlim ? BraceletConfig.slimScaleY : 1.0f);
-        float scaleZ = (isLeftArm ? BraceletConfig.leftScaleZ : BraceletConfig.scaleZ) * (isSlim ? BraceletConfig.slimScaleZ : 1.0f);
+        BraceletConfig.Transform t = BraceletConfig.get(isLeftArm, isSlim);
 
-        float slimShiftX = isSlim ? (isLeftArm ? -BraceletConfig.slimOffsetX : BraceletConfig.slimOffsetX) : 0.0f;
-        float slimShiftY = isSlim ? BraceletConfig.slimOffsetY : 0.0f;
-        float slimShiftZ = isSlim ? BraceletConfig.slimOffsetZ : 0.0f;
-
-        float offsetX = (isLeftArm ? BraceletConfig.leftOffsetX : BraceletConfig.offsetX) + slimShiftX;
-        float offsetY = (isLeftArm ? BraceletConfig.leftOffsetY : BraceletConfig.offsetY) + slimShiftY;
-        float offsetZ = (isLeftArm ? BraceletConfig.leftOffsetZ : BraceletConfig.offsetZ) + slimShiftZ;
-
-        float rotX = isLeftArm ? BraceletConfig.leftRotationX : BraceletConfig.rotationX;
-        float rotY = isLeftArm ? BraceletConfig.leftRotationY : BraceletConfig.rotationY;
-        float rotZ = isLeftArm ? BraceletConfig.leftRotationZ : BraceletConfig.rotationZ;
-
-        poseStack.translate(offsetX, offsetY, offsetZ);
-        poseStack.scale(scaleX, scaleY, scaleZ);
-        poseStack.mulPose(Axis.XP.rotationDegrees(rotX));
-        poseStack.mulPose(Axis.YP.rotationDegrees(rotY));
-        poseStack.mulPose(Axis.ZP.rotationDegrees(rotZ));
+        poseStack.translate(t.offsetX, t.offsetY, t.offsetZ);
+        poseStack.scale(t.scaleX, t.scaleY, t.scaleZ);
+        poseStack.mulPose(Axis.XP.rotationDegrees(t.rotationX));
+        poseStack.mulPose(Axis.YP.rotationDegrees(t.rotationY));
+        poseStack.mulPose(Axis.ZP.rotationDegrees(t.rotationZ));
 
         Minecraft.getInstance().getItemRenderer()
                 .renderStatic(itemStack, ItemDisplayContext.FIXED, light,
