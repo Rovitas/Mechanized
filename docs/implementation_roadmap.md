@@ -74,8 +74,8 @@
     - [x] 钢材系列：粗钢坯 (`raw_steel_blend`)、钢锭 (`steel_ingot`)、钢板 (`steel_plate`)、钢棒 (`steel_rod`)、金属废品 (`metal_scrap`) 原生 16×16 贴图与模型；
     - [x] 硅晶与电子：硅晶片 (`silicon_wafer`)、细铜导线 (`copper_wire`)、芯片废品 (`circuit_scrap`) 原生 16×16 贴图与模型；
     - [x] 规范落盘与归档：已通过 Blockbench 与原版风格验收，代码库已通过 Git Commit (`9b9831a`) 归档。
-  - [ ] **Java 业务代码与配方链 (Java Code & Logic): 待实现 ⏳【待 Code 席位接手】**
-    - [ ] 注册上述 8 款基础材料与废品物品（`ModItems`）并编入创造物品栏；
+  - [ ] **Java 业务代码与配方链 (Java Code & Logic): 进行中 ⏳【Code 席位推进中】**
+    - [x] 注册上述 8 款基础材料与废品物品（`ModItems`）并编入创造物品栏（`commit f0dece5`）；
     - [ ] 编写高炉炼钢（铁+煤$\to$粗钢坯$\to$钢锭）、高炉炼硅（下界石英$\to$硅晶片）等配方 JSON；
 - [ ] **供电网络体系**
   - 实现 NeoForge `IEnergyStorage` 统一对接与物品 DataComponent 储能；
