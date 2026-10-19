@@ -434,6 +434,18 @@
 * `replica_cradle_work_radius`：仿械仓作业范围半径；
 * `replica_energy_capacity`：仿灵械兽基础电池容量。
 
+### “频率”生态与跨纪元信号中继器 (Frequency Spectrum & Interdimensional Repeater · 已确定 ✅)
+*详细世界观与创世神系见专档 [`docs/worldview_and_lore.md`](file:///d:/Entertainment/MC/ModDevelopment/Mine/Mechanized-1.21.1-neoforge/docs/worldview_and_lore.md)*。
+* **四大频率领地（狂·极·御·灵）**：
+  * 机械圣使创造的四大守护灵作为生态基站，广播狂、极、御、灵四大信号频段；
+  * **手环为容器，模块定频率**：玩家手环（核心）仅是硬件母体，其响应的频率完全取决于所装载的功能模块。
+* **跨维度断网与科技树自然升级（Interdimensional Signal Disconnect）**：
+  * **入界断网**：玩家携带初级【轻量天幕手环 (Lite)】进入机械纪元后，由于缺乏本地守护灵频率握手协议，主世界模块全部离线失效，强力驱动玩家探索并打印原生支持频率广播的【制式手环 (Common)】；
+  * **出界瘫痪**：机械纪元的原生灵械兽与仿灵械兽被带入主世界后，因脱离守护灵信号基站而陷入离线休眠。
+* **跨纪元信号中继器（Interdimensional Repeater Block · 方块 ID: `interdimensional_repeater`）**：
+  * 终极跨界基建设备，穿透结界将机械纪元的守护灵频率信号接力投射至主世界；
+  * 在主世界部署并配置目标频率后，范围内的仿灵械兽与机械纪元高阶模块恢复满血运作！
+
 ---
 
 ## 13. 开发阶段与版本发布策略 (Release Roadmap)
