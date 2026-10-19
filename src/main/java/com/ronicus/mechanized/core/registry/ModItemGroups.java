@@ -20,6 +20,18 @@ public class ModItemGroups {
                         output.accept(ModItems.LITE_SPACE_DOME.get());
                         output.accept(ModItems.ZOETIC_BLOOM.get());
                         output.accept(ModItems.HARMONIZER.get());
+
+                        // Phase 1 Materials - Steel Chain
+                        output.accept(ModItems.RAW_STEEL_BLEND.get());
+                        output.accept(ModItems.STEEL_INGOT.get());
+                        output.accept(ModItems.STEEL_PLATE.get());
+                        output.accept(ModItems.STEEL_ROD.get());
+                        output.accept(ModItems.METAL_SCRAP.get());
+
+                        // Phase 1 Materials - Silicon & Electronics Chain
+                        output.accept(ModItems.SILICON_WAFER.get());
+                        output.accept(ModItems.COPPER_WIRE.get());
+                        output.accept(ModItems.CIRCUIT_SCRAP.get());
                     })
                     .build());
 }

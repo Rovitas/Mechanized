@@ -4,6 +4,15 @@
   "item.mechanized.lite_space_dome": "Lite Space Dome",
   "item.mechanized.booster": "Booster",
 
+  "item.mechanized.raw_steel_blend": "Raw Steel Blend",
+  "item.mechanized.steel_ingot": "Steel Ingot",
+  "item.mechanized.steel_plate": "Steel Plate",
+  "item.mechanized.steel_rod": "Steel Rod",
+  "item.mechanized.metal_scrap": "Metal Scrap",
+  "item.mechanized.silicon_wafer": "Silicon Wafer",
+  "item.mechanized.copper_wire": "Copper Wire",
+  "item.mechanized.circuit_scrap": "Circuit Scrap",
+
   "block.mechanized.zoetic_bloom": "Zoetic Bloom",
   "item.mechanized.zoetic_bloom": "Zoetic Bloom",
   "block.mechanized.harmonizer": "The Harmonizer",

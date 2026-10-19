@@ -4,6 +4,15 @@
   "item.mechanized.lite_space_dome": "轻量天幕手环",
   "item.mechanized.booster": "推进器",
 
+  "item.mechanized.raw_steel_blend": "粗钢坯",
+  "item.mechanized.steel_ingot": "钢锭",
+  "item.mechanized.steel_plate": "钢板",
+  "item.mechanized.steel_rod": "钢棒",
+  "item.mechanized.metal_scrap": "金属废品",
+  "item.mechanized.silicon_wafer": "硅晶片",
+  "item.mechanized.copper_wire": "细铜导线",
+  "item.mechanized.circuit_scrap": "芯片废品",
+
   "block.mechanized.zoetic_bloom": "辉源花",
   "item.mechanized.zoetic_bloom": "辉源花",
   "block.mechanized.harmonizer": "设备调谐台",
